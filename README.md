@@ -1,2 +1,3 @@
-# oo-systems-development
-Object Oriented Systems Development Coursework
+# Object-Oriented Systems Development
+
+### CW1: The Bucks Centre for the Performing Arts (Design & Implementation)
