@@ -1,0 +1,105 @@
+% !TeX program = xelatex
+\documentclass{report}
+% General
+\usepackage[british]{babel}
+\let\latinencoding\relax
+\usepackage[a4paper, portrait, margin=1in]{geometry}
+\usepackage{subfiles}
+\usepackage{enumitem}
+% Code
+\usepackage{minted}
+\usepackage{xcolor}
+\usemintedstyle{borland}
+\newmintedfile[java]{java}{
+  linenos=true,
+  numberblanklines=false,
+  numbersep=.2cm,
+  tabsize=4,
+  fontsize=\large
+}
+\renewcommand{\theFancyVerbLine}{\oldstylenums{\small{\texttt{\arabic{FancyVerbLine}}}}}
+% Image
+\usepackage{graphicx}
+\graphicspath{{.img/}}
+% Table
+\usepackage{tabularx}
+\usepackage{ltablex}
+\usepackage{booktabs}
+\newcolumntype{L}{>{\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.5}
+% Layout
+\renewcommand{\thepart}{\Alph{part}}
+\renewcommand{\thesection}{\Alph{section}}
+\usepackage{fontspec}
+\setmainfont[
+    ExternalLocation=.fonts/,
+    Ligatures=TeX,
+    BoldFont={LibertineBold},
+    BoldItalicFont={LibertineBoldItalic},
+    ItalicFont={LibertineRegularItalic}
+]{LibertineRegular}
+\setmonofont[
+    ExternalLocation=.fonts/,
+    Ligatures=TeX,
+    BoldFont={SourceSansProBold},
+    BoldItalicFont={SourceSansProBoldItalic},
+    ItalicFont={SourceSansProRegularItalic}
+]{SourceSansProRegular}
+\usepackage{titlesec}
+\titleformat{\chapter}
+    {\Large\bfseries}   % format
+    {}                  % label
+    {0pt}               % separator
+    {\huge}             % before-code
+\addto\captionsenglish{\renewcommand{\contentsname}{Summary}}
+\setlength{\parindent}{0cm} % 0.2cm
+\title{
+    \fontspec[Path=.fonts/]{LibertineDisplay}
+    \Large CO567\\
+    Object-Oriented Systems Development\\
+    Coursework 1\vspace*{.65cm}\\
+    \huge The BUCKS Centre for the Performing Arts\\
+    Design \& Implementation\vfill
+}
+\author{
+    Alex Paulo da Costa\\
+    \textit{21611431}\\
+    \hfill\\
+    Jack\\
+    \textit{00000000}\\
+    \hfill\\
+    James Harris\\
+    \textit{21606555}\\
+    \hfill\\
+    Qasim\\
+    \textit{00000000}
+}
+\date{
+    \vfill\textbf{\today}\\
+    \vspace*{.75cm}\textit{Computing \& Web Development}\\
+    Buckinghamshire New University
+}
+\begin{document}
+
+    \maketitle
+    \tableofcontents
+
+    \part{Design}
+    \subfile{design/useCase/}
+    \subfile{design/classes}
+    \subfile{design/dictionary}
+    \subfile{design/report}
+
+    \part{Implementation}
+    \subfile{implementation/requirements/}
+    \subfile{implementation/designClass}
+    \subfile{implementation/sequenceModel}
+    \subfile{implementation/detailedDesign/}
+    \subfile{implementation/java/}
+
+    \part{Appendix}
+    \subfile{appendix}
+\end{document}
