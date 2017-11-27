@@ -17,7 +17,7 @@ say '%% DO NOT EDIT; ./.pl > report/appendix.tex';
 my $git_command_commit_msg = '%s';
 
 say '\begin{tabularx}{\textwidth}{l l l L r r r}
-\textbf{\#} & \textbf{Author} & \textbf{Date} & \textbf{Commit Message} & \textbf{Files} & \textbf{++} & \textbf{--} \\\\
+\textbf{\#} & \textbf{Author} & \textbf{Date} & \textbf{Commit Message} & \textbf{Files} & \textbf{++} & \textbf{-{}-} \\\\
 \endhead';
 
 my @lines;
