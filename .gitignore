@@ -3,6 +3,7 @@ report/.pdf/*.*
 report/_minted-report
 !report/.pdf/*.pdf
 *synctex(busy)
+*.uml~
 
 # Compiled class file
 *.class
