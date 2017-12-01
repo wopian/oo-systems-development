@@ -21,7 +21,7 @@ say '\begin{tabularx}{\textwidth}{l l l L r r r}
 \endhead';
 
 my @lines;
-my @git_command = qw(git log --date=short --shortstat);
+my @git_command = qw(git log --date=short --shortstat --no-merges);
 push( @git_command, qq(--pretty=format:%H & %an NoTinAuthorFiled& %ad & $git_command_commit_msg) );
 @lines = reverse capturex(@git_command);
 
