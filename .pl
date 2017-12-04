@@ -16,12 +16,12 @@ my $git_remote = ( split /\n/xms, capturex(qw(git remote -v)) )[0];
 say '%% DO NOT EDIT; ./.pl > report/appendix.tex';
 my $git_command_commit_msg = '%s';
 
-say '\begin{tabularx}{\textwidth}{l l l L r r r}
+say '\begin{tabularx}{\textwidth}{l l l X r r r}
 \textbf{\#} & \textbf{Author} & \textbf{Date} & \textbf{Commit Message} & \textbf{Files} & \textbf{++} & \textbf{-{}-} \\\\
 \endhead';
 
 my @lines;
-my @git_command = qw(git log --date=short --shortstat --no-merges);
+my @git_command = qw(git log --grep=feat --date=short --shortstat --no-merges);
 push( @git_command, qq(--pretty=format:%H & %an NoTinAuthorFiled& %ad & $git_command_commit_msg) );
 @lines = reverse capturex(@git_command);
 
