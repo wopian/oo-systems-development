@@ -3,8 +3,9 @@ src/doc
 report/.pdf/*.*
 report/_minted-report
 !report/.pdf/*.pdf
+#Temporary Files
 *synctex(busy)
-*.uml~
+*.*~
 
 # Compiled class file
 *.class
