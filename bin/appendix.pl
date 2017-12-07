@@ -1,4 +1,8 @@
 #!/usr/bin/env perl
+# Author: James Harris <wopian@wopian.me>
+# Package *nix: pp -o bin/appendix bin/appendix.pl
+# Package Windows: pp -o bin/appendix.exe bin/appendix.pl
+
 use strict;
 use warnings;
 use autodie;
@@ -8,12 +12,12 @@ use open qw(:std :utf8);
 binmode STDOUT, ':encoding(UTF-8)';
 use IPC::System::Simple qw(capturex);
 
-my $print_author   = 1;
-my $commit_count   = 1;
-my ( $git_user, $git_repo, $git_commit_address );
+my $print_author = 1;
+my $commit_count = 1;
+my ($git_user, $git_repo, $git_commit_address);
 my $git_remote = ( split /\n/xms, capturex(qw(git remote -v)) )[0];
 
-say '%% DO NOT EDIT; ./.pl > report/appendix.tex';
+say "%% DO NOT EDIT\n%% *NIX: bin/appendix > report/appendix.tex";
 my $git_command_commit_msg = '%s';
 
 say '\begin{tabularx}{\textwidth}{l l l X r r r}
@@ -22,8 +26,9 @@ say '\begin{tabularx}{\textwidth}{l l l X r r r}
 
 my @lines;
 my @git_command = qw(git log --grep=feat --date=short --shortstat --no-merges);
-push( @git_command, qq(--pretty=format:%H & %an NoTinAuthorFiled& %ad & $git_command_commit_msg) );
-@lines = reverse capturex(@git_command);
+my $format = "format:%H & %an No Author& %ad & $git_command_commit_msg";
+push(@git_command, qq(--pretty=$format));
+@lines = capturex(@git_command);
 
 sub latex_escape {
     my $paragraph = shift;
@@ -37,14 +42,14 @@ sub latex_escape {
 
 my $which_line = 0;
 my @changes;
-for (@lines) {
+for (reverse @lines) {
     next if /\A\Z/xms;
     chomp;
     if ($which_line) {
         s/\A([0-9a-f]{40})\s//xms or die "Did not match the commit hash\n";
         my $date_author = '';
         my $c_msg;
-        /(?:& )(.*?)NoTinAuthorFiled(& .*? &) (.*)/;
+        /(?:& )(.*?)No Author(& .*? &) (.*)/;
         $date_author = latex_escape($1) . $2;
         $c_msg       = latex_escape($3);
         say "$commit_count & $date_author $c_msg & " . join( ' & ', @changes ) . ' \\\\';
