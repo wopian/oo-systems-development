@@ -6,6 +6,7 @@ report/_minted-report
 #Temporary Files
 *synctex(busy)
 *.*~
+.directory
 
 # Compiled class file
 *.class

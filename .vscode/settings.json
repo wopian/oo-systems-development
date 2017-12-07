@@ -21,6 +21,7 @@
     "**/.fonts": true,
     "**/report.synctex(busy)": true,
     "**/report/_minted-report": true,
-    "**/.pdf/*.{aux,log,synctex,toc,out,pyg}": true
+    "**/.pdf/*.{aux,log,synctex,toc,out,pyg}": true,
+    "**/.directory": true
   }
 }
