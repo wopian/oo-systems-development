@@ -82,7 +82,7 @@
 			CodeGeneration
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Fri Dec 08 00:48:33 GMT 2017'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Fri Dec 08 11:30:47 GMT 2017'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -1330,21 +1330,6 @@
                 <UML:Class xmi.idref = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B4A'/>
               </UML:StructuralFeature.type>
             </UML:Attribute>
-            <UML:Attribute xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B5E'
-              name = 'types' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
-              changeability = 'frozen' targetScope = 'instance'>
-              <UML:StructuralFeature.multiplicity>
-                <UML:Multiplicity xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B5F'>
-                  <UML:Multiplicity.range>
-                    <UML:MultiplicityRange xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B60'
-                      lower = '1' upper = '1'/>
-                  </UML:Multiplicity.range>
-                </UML:Multiplicity>
-              </UML:StructuralFeature.multiplicity>
-              <UML:StructuralFeature.type>
-                <UML:Class xmi.idref = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B61'/>
-              </UML:StructuralFeature.type>
-            </UML:Attribute>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B62'
               name = 'User' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
               isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
@@ -1357,21 +1342,12 @@
                   name = 'return' isSpecification = 'false' kind = 'return'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
-            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BAD'
-              name = 'viewShows' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CF8'
+              name = 'getType' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
               isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
               isAbstract = 'false'>
               <UML:BehavioralFeature.parameter>
-                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BAE'
-                  name = 'return' isSpecification = 'false' kind = 'return'/>
-              </UML:BehavioralFeature.parameter>
-            </UML:Operation>
-            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BAF'
-              name = 'viewEvents' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
-              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
-              isAbstract = 'false'>
-              <UML:BehavioralFeature.parameter>
-                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BB0'
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CF9'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
@@ -1529,7 +1505,7 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B88'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B89'
-                  name = 'name' isSpecification = 'false' kind = 'in'/>
+                  name = 'customer' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B8A'
@@ -1680,6 +1656,14 @@
               <UML:BehavioralFeature.parameter>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BC4'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D61'
+                  name = 'events' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D62'
+                  name = 'startDate' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D63'
+                  name = 'endDate' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D64'
+                  name = 'name' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BC5'
@@ -1690,7 +1674,11 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BC6'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BD5'
-                  name = 'eventName' isSpecification = 'false' kind = 'in'/>
+                  name = 'event' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D65'
+                  name = 'startDate' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D66'
+                  name = 'endDate' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BC7'
@@ -1701,7 +1689,7 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BC8'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BD4'
-                  name = 'eventName' isSpecification = 'false' kind = 'in'/>
+                  name = 'event' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BC9'
@@ -1711,6 +1699,14 @@
               <UML:BehavioralFeature.parameter>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BCA'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D68'
+                  name = 'event' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D69'
+                  name = 'start' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D6A'
+                  name = 'end' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D6B'
+                  name = 'maxSeatPerCustomer' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BCB'
@@ -1721,7 +1717,11 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BCC'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BD3'
-                  name = 'showName' isSpecification = 'false' kind = 'in'/>
+                  name = 'show' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D6C'
+                  name = 'newStart' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D6D'
+                  name = 'newEnd' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BCD'
@@ -1732,7 +1732,7 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BCE'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BD2'
-                  name = 'showName' isSpecification = 'false' kind = 'in'/>
+                  name = 'show' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BCF'
@@ -1743,7 +1743,9 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BD0'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BD1'
-                  name = 'showName' isSpecification = 'false' kind = 'in'/>
+                  name = 'show' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D70'
+                  name = 'newMSPC' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BD6'
@@ -1763,11 +1765,9 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BD9'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BDA'
-                  name = 'showName' isSpecification = 'false' kind = 'in'/>
+                  name = 'seats' isSpecification = 'false' kind = 'in'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BDB'
-                  name = 'seatNumbers' isSpecification = 'false' kind = 'in'/>
-                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BDC'
-                  name = 'promotionName' isSpecification = 'false' kind = 'in'/>
+                  name = 'promotionID' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BDD'
@@ -1778,7 +1778,7 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BDE'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BDF'
-                  name = 'promotionName' isSpecification = 'false' kind = 'in'/>
+                  name = 'promotion' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BE0'
@@ -1789,7 +1789,7 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BE1'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BE2'
-                  name = 'promotionName' isSpecification = 'false' kind = 'in'/>
+                  name = 'promotion' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BE3'
@@ -1809,7 +1809,7 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BE6'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BE7'
-                  name = 'agentName' isSpecification = 'false' kind = 'in'/>
+                  name = 'agent' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BE8'
@@ -1820,7 +1820,7 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BE9'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BEA'
-                  name = 'agentName' isSpecification = 'false' kind = 'in'/>
+                  name = 'agent' isSpecification = 'false' kind = 'in'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BEB'
@@ -1831,7 +1831,19 @@
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BEC'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BED'
-                  name = 'agentName' isSpecification = 'false' kind = 'in'/>
+                  name = 'agent' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CF6'
+              name = 'Manager' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:ModelElement.stereotype>
+                <UML:Stereotype href = 'http://argouml.org/profiles/uml14/default-uml14.xmi#.:000000000000082B'/>
+              </UML:ModelElement.stereotype>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CF7'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
           </UML:Classifier.feature>
@@ -2956,15 +2968,6 @@
                   name = 'return' isSpecification = 'false' kind = 'return'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
-            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CE9'
-              name = 'getPromotionName' visibility = 'public' isSpecification = 'false'
-              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
-              isLeaf = 'false' isAbstract = 'false'>
-              <UML:BehavioralFeature.parameter>
-                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CEA'
-                  name = 'return' isSpecification = 'false' kind = 'return'/>
-              </UML:BehavioralFeature.parameter>
-            </UML:Operation>
             <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CEB'
               name = 'setNumber' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
               isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
@@ -3007,6 +3010,424 @@
               </UML:ModelElement.stereotype>
               <UML:BehavioralFeature.parameter>
                 <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CF5'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Classifier.feature>
+        </UML:Class>
+        <UML:Class xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CFA'
+          name = 'OTS' visibility = 'public' isSpecification = 'false' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' isActive = 'false'>
+          <UML:Classifier.feature>
+            <UML:Attribute xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CFB'
+              name = 'static users' visibility = 'private' isSpecification = 'false' ownerScope = 'instance'
+              changeability = 'changeable' targetScope = 'instance'>
+              <UML:StructuralFeature.multiplicity>
+                <UML:Multiplicity xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CFC'>
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CFD'
+                      lower = '1' upper = '1'/>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:StructuralFeature.multiplicity>
+              <UML:StructuralFeature.type>
+                <UML:Class xmi.idref = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B33'/>
+              </UML:StructuralFeature.type>
+            </UML:Attribute>
+            <UML:Attribute xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CFE'
+              name = 'events' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              changeability = 'changeable' targetScope = 'instance'>
+              <UML:StructuralFeature.multiplicity>
+                <UML:Multiplicity xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CFF'>
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D00'
+                      lower = '1' upper = '1'/>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:StructuralFeature.multiplicity>
+              <UML:StructuralFeature.type>
+                <UML:Class xmi.idref = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B37'/>
+              </UML:StructuralFeature.type>
+            </UML:Attribute>
+            <UML:Attribute xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D01'
+              name = 'promotions' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              changeability = 'changeable' targetScope = 'instance'>
+              <UML:StructuralFeature.multiplicity>
+                <UML:Multiplicity xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D02'>
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D03'
+                      lower = '1' upper = '1'/>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:StructuralFeature.multiplicity>
+              <UML:StructuralFeature.type>
+                <UML:Class xmi.idref = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B37'/>
+              </UML:StructuralFeature.type>
+            </UML:Attribute>
+            <UML:Attribute xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D04'
+              name = 'currentUser' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              changeability = 'changeable' targetScope = 'instance'>
+              <UML:StructuralFeature.multiplicity>
+                <UML:Multiplicity xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D05'>
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D06'
+                      lower = '1' upper = '1'/>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:StructuralFeature.multiplicity>
+              <UML:StructuralFeature.type>
+                <UML:Class xmi.idref = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B4E'/>
+              </UML:StructuralFeature.type>
+            </UML:Attribute>
+            <UML:Attribute xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D07'
+              name = 'types' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              changeability = 'changeable' targetScope = 'instance'>
+              <UML:StructuralFeature.multiplicity>
+                <UML:Multiplicity xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D08'>
+                  <UML:Multiplicity.range>
+                    <UML:MultiplicityRange xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D09'
+                      lower = '1' upper = '1'/>
+                  </UML:Multiplicity.range>
+                </UML:Multiplicity>
+              </UML:StructuralFeature.multiplicity>
+              <UML:StructuralFeature.type>
+                <UML:Class xmi.idref = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B61'/>
+              </UML:StructuralFeature.type>
+            </UML:Attribute>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D0A'
+              name = 'register' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D0B'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D0C'
+              name = 'login' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D0D'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D0E'
+                  name = 'email' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D0F'
+                  name = 'password' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D10'
+              name = 'OTS' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:ModelElement.stereotype>
+                <UML:Stereotype href = 'http://argouml.org/profiles/uml14/default-uml14.xmi#.:000000000000082B'/>
+              </UML:ModelElement.stereotype>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D11'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D12'
+              name = 'private populate' visibility = 'private' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D13'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D14'
+              name = 'viewShows' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D15'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D16'
+              name = 'viewEvents' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D17'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D18'
+              name = 'viewPromotions' visibility = 'public' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D19'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D1A'
+              name = 'findShow' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D1B'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D1C'
+                  name = 'showName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D1D'
+              name = 'findEvent' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D1E'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D1F'
+                  name = 'eventName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D20'
+              name = 'findPromotion' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D21'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D22'
+                  name = 'promotionName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D23'
+              name = 'findAgent' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D24'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D25'
+                  name = 'agentName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D26'
+              name = 'createCustomer' visibility = 'public' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D27'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D28'
+              name = 'modifyCustomer' visibility = 'public' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D29'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D2A'
+                  name = 'customerName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D2B'
+              name = 'viewTickets' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D2C'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D2D'
+              name = 'viewTickets' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D2E'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D2F'
+                  name = 'showName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D30'
+              name = 'viewTickets' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D31'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D32'
+                  name = 'startRange' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D33'
+                  name = 'endRange' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D34'
+              name = 'addEvent' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D35'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D36'
+              name = 'rescheduleEvent' visibility = 'public' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D37'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D3B'
+                  name = 'eventName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D38'
+              name = 'cancelShow' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D39'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D3A'
+                  name = 'showName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D3C'
+              name = 'cancelEvent' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D3D'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D3E'
+                  name = 'eventName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D3F'
+              name = 'addShow' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D40'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D41'
+              name = 'rescheduleShow' visibility = 'public' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D42'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D43'
+                  name = 'showName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D44'
+              name = 'changeMSPC' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D45'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D46'
+                  name = 'showName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D47'
+              name = 'addPromotion' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D48'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D49'
+              name = 'assignPromotions' visibility = 'public' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D4A'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D4B'
+                  name = 'showName' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D4C'
+                  name = 'seatNumbers' isSpecification = 'false' kind = 'in'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D4D'
+                  name = 'promotionName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D4E'
+              name = 'changePromotion' visibility = 'public' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D4F'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D50'
+                  name = 'promotionName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D51'
+              name = 'deletePromotion' visibility = 'public' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D52'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D53'
+                  name = 'promotionName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D54'
+              name = 'addContract' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D55'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D56'
+              name = 'changeContract' visibility = 'public' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D57'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D58'
+                  name = 'agentName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D59'
+              name = 'cancelContract' visibility = 'public' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D5A'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D5B'
+                  name = 'agentName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D5C'
+              name = 'renewContract' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
+              isQuery = 'false' concurrency = 'sequential' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D5D'
+                  name = 'return' isSpecification = 'false' kind = 'return'/>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D5E'
+                  name = 'agentName' isSpecification = 'false' kind = 'in'/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+            <UML:Operation xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D5F'
+              name = 'purchaseTickets' visibility = 'public' isSpecification = 'false'
+              ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '-64--88--112--102--300d72a:1603235de85:-8000:0000000000000D60'
                   name = 'return' isSpecification = 'false' kind = 'return'/>
               </UML:BehavioralFeature.parameter>
             </UML:Operation>
@@ -3504,8 +3925,8 @@
       />
     </group>
     <rectangle name="Fig5.3"
-      x="-6"
-      y="34"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -3515,7 +3936,7 @@
       visibility="0"
     />
     <group name="Fig5.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-6, 34, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:0000000000000875"
          fill="1"
          fillcolor="white"
@@ -3527,8 +3948,8 @@
       </private>
       
       <rectangle name="Fig5.4.0"
-        x="-6"
-        y="34"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -3937,8 +4358,8 @@
       />
     </group>
     <rectangle name="Fig1.3"
-      x="-150"
-      y="98"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -3948,7 +4369,7 @@
       visibility="0"
     />
     <group name="Fig1.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-150, 98, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:0000000000000885"
          fill="1"
          fillcolor="white"
@@ -3960,8 +4381,8 @@
       </private>
       
       <rectangle name="Fig1.4.0"
-        x="-150"
-        y="98"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -4492,8 +4913,8 @@
       />
     </group>
     <rectangle name="Fig8.3"
-      x="-38"
-      y="-70"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -4503,7 +4924,7 @@
       visibility="0"
     />
     <group name="Fig8.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-38, -70, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:0000000000000898"
          fill="1"
          fillcolor="white"
@@ -4515,8 +4936,8 @@
       </private>
       
       <rectangle name="Fig8.4.0"
-        x="-38"
-        y="-70"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -4761,7 +5182,7 @@
                         offset="10" />
     </private>
     <path name="Fig13.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -4792,7 +5213,7 @@
                         offset="10" />
     </private>
     <path name="Fig14.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -4987,8 +5408,8 @@
       />
     </group>
     <rectangle name="Fig1.3"
-      x="-128"
-      y="1"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -4998,7 +5419,7 @@
       visibility="0"
     />
     <group name="Fig1.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-128, 1, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:0000000000000885"
          fill="1"
          fillcolor="white"
@@ -5010,8 +5431,8 @@
       </private>
       
       <rectangle name="Fig1.4.0"
-        x="-128"
-        y="1"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -5083,8 +5504,8 @@
       />
     </group>
     <rectangle name="Fig2.3"
-      x="-134"
-      y="42"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -5094,7 +5515,7 @@
       visibility="0"
     />
     <group name="Fig2.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-134, 42, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:0000000000000898"
          fill="1"
          fillcolor="white"
@@ -5106,8 +5527,8 @@
       </private>
       
       <rectangle name="Fig2.4.0"
-        x="-134"
-        y="42"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -5822,8 +6243,8 @@
       />
     </group>
     <rectangle name="Fig12.3"
-      x="-142"
-      y="18"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -5833,7 +6254,7 @@
       visibility="0"
     />
     <group name="Fig12.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-142, 18, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:00000000000008B3"
          fill="1"
          fillcolor="white"
@@ -5845,8 +6266,8 @@
       </private>
       
       <rectangle name="Fig12.4.0"
-        x="-142"
-        y="18"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -5969,7 +6390,7 @@
                         offset="10" />
     </private>
     <path name="Fig16.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -7368,7 +7789,7 @@
     </group>
     <rectangle name="Fig5.3"
       x="10"
-      y="42"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -7378,7 +7799,7 @@
       visibility="0"
     />
     <group name="Fig5.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 42, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[0, 0, 0, 0]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BC1"
          fill="1"
          fillcolor="white"
@@ -7391,7 +7812,7 @@
       
       <rectangle name="Fig5.4.0"
         x="10"
-        y="42"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -7647,8 +8068,8 @@
       />
     </group>
     <rectangle name="Fig9.3"
-      x="-118"
-      y="42"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -7658,7 +8079,7 @@
       visibility="0"
     />
     <group name="Fig9.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-118, 42, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BCF"
          fill="1"
          fillcolor="white"
@@ -7670,8 +8091,8 @@
       </private>
       
       <rectangle name="Fig9.4.0"
-        x="-118"
-        y="42"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -7683,7 +8104,7 @@
     </group>
   </group>
   <group name="Fig10"
-       description="org.argouml.uml.diagram.use_case.ui.FigUseCase[360, 208, 116, 44]pathVisible=false;stereotypeView=0;extensionPointVisible=false"
+       description="org.argouml.uml.diagram.use_case.ui.FigUseCase[360, 208, 118, 44]pathVisible=false;stereotypeView=0;extensionPointVisible=false"
        href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BC7"
        fill="1"
        fillcolor="white"
@@ -7694,9 +8115,9 @@
     </private>
     
     <ellipse name="Fig10.0"
-      x="418"
+      x="419"
       y="230"
-      rx="58"
+      rx="59"
       ry="22"
       fill="1"
       fillcolor="white"
@@ -7706,7 +8127,7 @@
     <text name="Fig10.1"
       x="371"
       y="218"
-      width="94"
+      width="96"
       height="23"
       fill="0"
       fillcolor="white"
@@ -7720,7 +8141,7 @@
       justification="Center"
     >Purchase Ticket</text>
     <group name="Fig10.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[363, 218, 96, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[371, 218, 96, 0]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BC7"
          fill="0"
          fillcolor="white"
@@ -7732,7 +8153,7 @@
       </private>
       
       <rectangle name="Fig10.2.0"
-        x="363"
+        x="371"
         y="218"
         width="96"
         height="0"
@@ -7743,8 +8164,8 @@
       />
     </group>
     <rectangle name="Fig10.3"
-      x="-108"
-      y="42"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -7754,7 +8175,7 @@
       visibility="0"
     />
     <group name="Fig10.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-118, 32, 0, 0]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[0, 0, 0, 0]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BC7"
          fill="1"
          fillcolor="white"
@@ -7766,8 +8187,8 @@
       </private>
       
       <rectangle name="Fig10.4.0"
-        x="-108"
-        y="42"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -7840,7 +8261,7 @@
     </group>
     <rectangle name="Fig11.3"
       x="10"
-      y="50"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -7850,7 +8271,7 @@
       visibility="0"
     />
     <group name="Fig11.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 50, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BD9"
          fill="1"
          fillcolor="white"
@@ -7863,7 +8284,7 @@
       
       <rectangle name="Fig11.4.0"
         x="10"
-        y="50"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -7993,7 +8414,7 @@
     </group>
     <rectangle name="Fig13.3"
       x="10"
-      y="50"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -8003,7 +8424,7 @@
       visibility="0"
     />
     <group name="Fig13.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 50, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BDD"
          fill="1"
          fillcolor="white"
@@ -8016,7 +8437,7 @@
       
       <rectangle name="Fig13.4.0"
         x="10"
-        y="50"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -8119,8 +8540,8 @@
       />
     </group>
     <rectangle name="Fig15.3"
-      x="2"
-      y="50"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -8130,7 +8551,7 @@
       visibility="0"
     />
     <group name="Fig15.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[2, 50, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BDF"
          fill="1"
          fillcolor="white"
@@ -8142,8 +8563,8 @@
       </private>
       
       <rectangle name="Fig15.4.0"
-        x="2"
-        y="50"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -8215,8 +8636,8 @@
       />
     </group>
     <rectangle name="Fig16.3"
-      x="18"
-      y="50"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -8226,7 +8647,7 @@
       visibility="0"
     />
     <group name="Fig16.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[18, 50, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BE0"
          fill="1"
          fillcolor="white"
@@ -8238,8 +8659,8 @@
       </private>
       
       <rectangle name="Fig16.4.0"
-        x="18"
-        y="50"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -8394,7 +8815,7 @@
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="475"
+      <moveto x="477"
               y="229" />
       <lineto x="528"
               y="229" />
@@ -8450,13 +8871,13 @@
                         offset="34" />
     </private>
     <path name="Fig22.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="441"
+      <moveto x="442"
               y="209" />
       <lineto x="497"
               y="163" />
@@ -8507,7 +8928,7 @@
                         offset="5" />
     </private>
     <path name="Fig23.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -8538,7 +8959,7 @@
                         offset="10" />
     </private>
     <path name="Fig24.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -8733,8 +9154,8 @@
       />
     </group>
     <rectangle name="Fig1.3"
-      x="26"
-      y="-158"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -8744,7 +9165,7 @@
       visibility="0"
     />
     <group name="Fig1.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[26, -158, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BAD"
          fill="1"
          fillcolor="white"
@@ -8756,8 +9177,8 @@
       </private>
       
       <rectangle name="Fig1.4.0"
-        x="26"
-        y="-158"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -8829,8 +9250,8 @@
       />
     </group>
     <rectangle name="Fig2.3"
-      x="154"
-      y="2"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -8840,7 +9261,7 @@
       visibility="0"
     />
     <group name="Fig2.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[154, 2, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BCF"
          fill="1"
          fillcolor="white"
@@ -8852,8 +9273,8 @@
       </private>
       
       <rectangle name="Fig2.4.0"
-        x="154"
-        y="2"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -8982,8 +9403,8 @@
       />
     </group>
     <rectangle name="Fig4.3"
-      x="-375"
-      y="-142"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -8993,7 +9414,7 @@
       visibility="0"
     />
     <group name="Fig4.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-375, -142, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[0, 0, 0, 0]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BC1"
          fill="1"
          fillcolor="white"
@@ -9005,8 +9426,8 @@
       </private>
       
       <rectangle name="Fig4.4.0"
-        x="-375"
-        y="-142"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -9036,7 +9457,7 @@
                         offset="28" />
     </private>
     <path name="Fig5.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -9109,8 +9530,8 @@
       />
     </group>
     <rectangle name="Fig6.3"
-      x="-97"
-      y="118"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -9120,7 +9541,7 @@
       visibility="0"
     />
     <group name="Fig6.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-97, 118, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:0000000000000898"
          fill="1"
          fillcolor="white"
@@ -9132,8 +9553,8 @@
       </private>
       
       <rectangle name="Fig6.4.0"
-        x="-97"
-        y="118"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -9163,7 +9584,7 @@
                         offset="31" />
     </private>
     <path name="Fig7.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -9236,8 +9657,8 @@
       />
     </group>
     <rectangle name="Fig8.3"
-      x="-12"
-      y="73"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -9247,7 +9668,7 @@
       visibility="0"
     />
     <group name="Fig8.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-12, 73, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:0000000000000885"
          fill="1"
          fillcolor="white"
@@ -9259,8 +9680,8 @@
       </private>
       
       <rectangle name="Fig8.4.0"
-        x="-12"
-        y="73"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -9290,7 +9711,7 @@
                         offset="10" />
     </private>
     <path name="Fig9.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -9363,8 +9784,8 @@
       />
     </group>
     <rectangle name="Fig10.3"
-      x="-9"
-      y="75"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -9374,7 +9795,7 @@
       visibility="0"
     />
     <group name="Fig10.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-19, 65, 0, 0]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[0, 0, 0, 0]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BC7"
          fill="1"
          fillcolor="white"
@@ -9386,8 +9807,8 @@
       </private>
       
       <rectangle name="Fig10.4.0"
-        x="-9"
-        y="75"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -9417,7 +9838,7 @@
                         offset="10" />
     </private>
     <path name="Fig11.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -9448,7 +9869,7 @@
                         offset="32" />
     </private>
     <path name="Fig12.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -9505,7 +9926,7 @@
                         offset="5" />
     </private>
     <path name="Fig13.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -9536,7 +9957,7 @@
                         offset="10" />
     </private>
     <path name="Fig14.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -9586,7 +10007,7 @@
       justification="Center"
     >Add Customer Profile</text>
     <group name="Fig15.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[355, 417, 87, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[354, 421, 125, 0]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B16"
          fill="0"
          fillcolor="white"
@@ -9598,9 +10019,9 @@
       </private>
       
       <rectangle name="Fig15.2.0"
-        x="355"
-        y="417"
-        width="87"
+        x="354"
+        y="421"
+        width="125"
         height="0"
         fill="0"
         fillcolor="white"
@@ -9609,8 +10030,8 @@
       />
     </group>
     <rectangle name="Fig15.3"
-      x="354"
-      y="418"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -9620,7 +10041,7 @@
       visibility="0"
     />
     <group name="Fig15.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[354, 418, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B16"
          fill="1"
          fillcolor="white"
@@ -9632,8 +10053,8 @@
       </private>
       
       <rectangle name="Fig15.4.0"
-        x="354"
-        y="418"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -9689,7 +10110,7 @@
                         offset="5" />
     </private>
     <path name="Fig16.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -9762,8 +10183,8 @@
       />
     </group>
     <rectangle name="Fig17.3"
-      x="18"
-      y="79"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -9773,7 +10194,7 @@
       visibility="0"
     />
     <group name="Fig17.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[18, 79, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BE0"
          fill="1"
          fillcolor="white"
@@ -9785,8 +10206,8 @@
       </private>
       
       <rectangle name="Fig17.4.0"
-        x="18"
-        y="79"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -9858,8 +10279,8 @@
       />
     </group>
     <rectangle name="Fig18.3"
-      x="-23"
-      y="95"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -9869,7 +10290,7 @@
       visibility="0"
     />
     <group name="Fig18.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-23, 95, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BDF"
          fill="1"
          fillcolor="white"
@@ -9881,8 +10302,8 @@
       </private>
       
       <rectangle name="Fig18.4.0"
-        x="-23"
-        y="95"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -9912,7 +10333,7 @@
                         offset="10" />
     </private>
     <path name="Fig19.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -9969,7 +10390,7 @@
                         offset="5" />
     </private>
     <path name="Fig20.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -10042,8 +10463,8 @@
       />
     </group>
     <rectangle name="Fig21.3"
-      x="-18"
-      y="347"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -10053,7 +10474,7 @@
       visibility="0"
     />
     <group name="Fig21.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-18, 347, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BD9"
          fill="1"
          fillcolor="white"
@@ -10065,8 +10486,8 @@
       </private>
       
       <rectangle name="Fig21.4.0"
-        x="-18"
-        y="347"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -10122,7 +10543,7 @@
                         offset="5" />
     </private>
     <path name="Fig22.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -10178,6 +10599,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -10194,8 +10616,8 @@
       />
     </group>
     <rectangle name="Fig23.3"
-      x="98"
-      y="47"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -10205,7 +10627,7 @@
       visibility="0"
     />
     <group name="Fig23.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[98, 47, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BDD"
          fill="1"
          fillcolor="white"
@@ -10217,8 +10639,8 @@
       </private>
       
       <rectangle name="Fig23.4.0"
-        x="98"
-        y="47"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -10248,7 +10670,7 @@
                         offset="10" />
     </private>
     <path name="Fig24.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -10305,7 +10727,7 @@
                         offset="5" />
     </private>
     <path name="Fig25.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -10483,6 +10905,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -10499,8 +10922,8 @@
       />
     </group>
     <rectangle name="Fig1.3"
-      x="172"
-      y="2"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -10510,7 +10933,7 @@
       visibility="0"
     />
     <group name="Fig1.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[172, 2, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:000000000000086B"
          fill="1"
          fillcolor="white"
@@ -10522,8 +10945,8 @@
       </private>
       
       <rectangle name="Fig1.4.0"
-        x="172"
-        y="2"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -10579,7 +11002,7 @@
                         offset="5" />
     </private>
     <path name="Fig2.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -10635,6 +11058,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -10651,8 +11075,8 @@
       />
     </group>
     <rectangle name="Fig3.3"
-      x="115"
-      y="3"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -10662,7 +11086,7 @@
       visibility="0"
     />
     <group name="Fig3.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[115, 3, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:00000000000008A1"
          fill="1"
          fillcolor="white"
@@ -10674,8 +11098,8 @@
       </private>
       
       <rectangle name="Fig3.4.0"
-        x="115"
-        y="3"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -10731,7 +11155,7 @@
                         offset="5" />
     </private>
     <path name="Fig4.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -10787,6 +11211,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -10803,8 +11228,8 @@
       />
     </group>
     <rectangle name="Fig5.3"
-      x="157"
-      y="14"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -10814,7 +11239,7 @@
       visibility="0"
     />
     <group name="Fig5.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[157, 14, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:000000000000088A"
          fill="1"
          fillcolor="white"
@@ -10826,8 +11251,8 @@
       </private>
       
       <rectangle name="Fig5.4.0"
-        x="157"
-        y="14"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -10883,7 +11308,7 @@
                         offset="5" />
     </private>
     <path name="Fig6.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -10939,6 +11364,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -10955,8 +11381,8 @@
       />
     </group>
     <rectangle name="Fig7.3"
-      x="186"
-      y="42"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -10966,7 +11392,7 @@
       visibility="0"
     />
     <group name="Fig7.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[186, 42, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:0000000000000875"
          fill="1"
          fillcolor="white"
@@ -10978,8 +11404,8 @@
       </private>
       
       <rectangle name="Fig7.4.0"
-        x="186"
-        y="42"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -11035,7 +11461,7 @@
                         offset="5" />
     </private>
     <path name="Fig8.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -11108,8 +11534,8 @@
       />
     </group>
     <rectangle name="Fig9.3"
-      x="194"
-      y="93"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -11119,7 +11545,7 @@
       visibility="0"
     />
     <group name="Fig9.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[194, 93, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:000000000000088C"
          fill="1"
          fillcolor="white"
@@ -11131,8 +11557,8 @@
       </private>
       
       <rectangle name="Fig9.4.0"
-        x="194"
-        y="93"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -11188,7 +11614,7 @@
                         offset="5" />
     </private>
     <path name="Fig10.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -11261,8 +11687,8 @@
       />
     </group>
     <rectangle name="Fig11.3"
-      x="177"
-      y="-22"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -11272,7 +11698,7 @@
       visibility="0"
     />
     <group name="Fig11.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[177, -22, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:000000000000086F"
          fill="1"
          fillcolor="white"
@@ -11284,8 +11710,8 @@
       </private>
       
       <rectangle name="Fig11.4.0"
-        x="177"
-        y="-22"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -11341,7 +11767,7 @@
                         offset="5" />
     </private>
     <path name="Fig12.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -11397,6 +11823,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -11413,8 +11840,8 @@
       />
     </group>
     <rectangle name="Fig13.3"
-      x="178"
-      y="17"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -11424,7 +11851,7 @@
       visibility="0"
     />
     <group name="Fig13.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[178, 17, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:000000000000088B"
          fill="1"
          fillcolor="white"
@@ -11436,8 +11863,8 @@
       </private>
       
       <rectangle name="Fig13.4.0"
-        x="178"
-        y="17"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -11493,7 +11920,7 @@
                         offset="5" />
     </private>
     <path name="Fig14.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -11549,6 +11976,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -11565,8 +11993,8 @@
       />
     </group>
     <rectangle name="Fig15.3"
-      x="269"
-      y="28"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -11576,7 +12004,7 @@
       visibility="0"
     />
     <group name="Fig15.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[269, 28, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:0000000000000885"
          fill="1"
          fillcolor="white"
@@ -11588,8 +12016,8 @@
       </private>
       
       <rectangle name="Fig15.4.0"
-        x="269"
-        y="28"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -11619,7 +12047,7 @@
                         offset="10" />
     </private>
     <path name="Fig16.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -11650,7 +12078,7 @@
                         offset="10" />
     </private>
     <path name="Fig17.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -11706,6 +12134,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -11722,8 +12151,8 @@
       />
     </group>
     <rectangle name="Fig18.3"
-      x="299"
-      y="25"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -11733,7 +12162,7 @@
       visibility="0"
     />
     <group name="Fig18.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[299, 25, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:0000000000000898"
          fill="1"
          fillcolor="white"
@@ -11745,8 +12174,8 @@
       </private>
       
       <rectangle name="Fig18.4.0"
-        x="299"
-        y="25"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -11776,16 +12205,16 @@
                         offset="10" />
     </private>
     <path name="Fig19.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="1028"
+      <moveto x="1021"
               y="344" />
-      <lineto x="1028"
-              y="237" />
+      <lineto x="1021"
+              y="238" />
     </path>
   </group>
   <group name="Fig20"
@@ -11807,16 +12236,16 @@
                         offset="10" />
     </private>
     <path name="Fig20.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="1028"
+      <moveto x="1021"
               y="344" />
-      <lineto x="1028"
-              y="237" />
+      <lineto x="1021"
+              y="238" />
     </path>
   </group>
   <group name="Fig21"
@@ -11838,16 +12267,16 @@
                         offset="10" />
     </private>
     <path name="Fig21.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="1028"
+      <moveto x="1021"
               y="344" />
-      <lineto x="1028"
-              y="237" />
+      <lineto x="1021"
+              y="238" />
     </path>
   </group>
   <group name="Fig22"
@@ -11869,16 +12298,16 @@
                         offset="10" />
     </private>
     <path name="Fig22.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="1028"
+      <moveto x="1021"
               y="344" />
-      <lineto x="1028"
-              y="237" />
+      <lineto x="1021"
+              y="238" />
     </path>
   </group>
   <group name="Fig23"
@@ -11900,7 +12329,7 @@
                         offset="10" />
     </private>
     <path name="Fig23.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -11931,7 +12360,7 @@
                         offset="10" />
     </private>
     <path name="Fig24.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -11962,7 +12391,7 @@
                         offset="10" />
     </private>
     <path name="Fig25.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -12018,6 +12447,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -12034,8 +12464,8 @@
       />
     </group>
     <rectangle name="Fig26.3"
-      x="125"
-      y="48"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -12045,7 +12475,7 @@
       visibility="0"
     />
     <group name="Fig26.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[125, 48, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:000000000000089A"
          fill="1"
          fillcolor="white"
@@ -12057,8 +12487,8 @@
       </private>
       
       <rectangle name="Fig26.4.0"
-        x="125"
-        y="48"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -12088,7 +12518,7 @@
                         offset="10" />
     </private>
     <path name="Fig27.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -12145,7 +12575,7 @@
                         offset="5" />
     </private>
     <path name="Fig28.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -12201,6 +12631,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -12217,8 +12648,8 @@
       />
     </group>
     <rectangle name="Fig29.3"
-      x="151"
-      y="34"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -12228,7 +12659,7 @@
       visibility="0"
     />
     <group name="Fig29.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[151, 34, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:00000000000008A2"
          fill="1"
          fillcolor="white"
@@ -12240,8 +12671,8 @@
       </private>
       
       <rectangle name="Fig29.4.0"
-        x="151"
-        y="34"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -12271,7 +12702,7 @@
                         offset="10" />
     </private>
     <path name="Fig30.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -12328,7 +12759,7 @@
                         offset="5" />
     </private>
     <path name="Fig31.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -12384,6 +12815,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -12400,8 +12832,8 @@
       />
     </group>
     <rectangle name="Fig32.3"
-      x="284"
-      y="64"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -12411,7 +12843,7 @@
       visibility="0"
     />
     <group name="Fig32.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[284, 64, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:00000000000008B3"
          fill="1"
          fillcolor="white"
@@ -12423,8 +12855,8 @@
       </private>
       
       <rectangle name="Fig32.4.0"
-        x="284"
-        y="64"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -12454,7 +12886,7 @@
                         offset="10" />
     </private>
     <path name="Fig33.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -12510,6 +12942,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -12526,8 +12959,8 @@
       />
     </group>
     <rectangle name="Fig34.3"
-      x="118"
-      y="22"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -12537,7 +12970,7 @@
       visibility="0"
     />
     <group name="Fig34.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[118, 22, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:00000000000008A3"
          fill="1"
          fillcolor="white"
@@ -12549,8 +12982,8 @@
       </private>
       
       <rectangle name="Fig34.4.0"
-        x="118"
-        y="22"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -12580,7 +13013,7 @@
                         offset="10" />
     </private>
     <path name="Fig35.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -12637,7 +13070,7 @@
                         offset="5" />
     </private>
     <path name="Fig36.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -12693,6 +13126,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -12709,8 +13143,8 @@
       />
     </group>
     <rectangle name="Fig37.3"
-      x="163"
-      y="31"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -12720,7 +13154,7 @@
       visibility="0"
     />
     <group name="Fig37.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[163, 31, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:00000000000008A4"
          fill="1"
          fillcolor="white"
@@ -12732,8 +13166,8 @@
       </private>
       
       <rectangle name="Fig37.4.0"
-        x="163"
-        y="31"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -12763,7 +13197,7 @@
                         offset="10" />
     </private>
     <path name="Fig38.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -12820,7 +13254,7 @@
                         offset="5" />
     </private>
     <path name="Fig39.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -12876,6 +13310,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -12892,8 +13327,8 @@
       />
     </group>
     <rectangle name="Fig40.3"
-      x="71"
-      y="33"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -12903,7 +13338,7 @@
       visibility="0"
     />
     <group name="Fig40.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[71, 33, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:00000000000008B7"
          fill="1"
          fillcolor="white"
@@ -12915,8 +13350,8 @@
       </private>
       
       <rectangle name="Fig40.4.0"
-        x="71"
-        y="33"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -12972,7 +13407,7 @@
                         offset="5" />
     </private>
     <path name="Fig41.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -13028,6 +13463,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -13044,8 +13480,8 @@
       />
     </group>
     <rectangle name="Fig42.3"
-      x="152"
-      y="23"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -13055,7 +13491,7 @@
       visibility="0"
     />
     <group name="Fig42.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[152, 23, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:00000000000008B9"
          fill="1"
          fillcolor="white"
@@ -13067,8 +13503,8 @@
       </private>
       
       <rectangle name="Fig42.4.0"
-        x="152"
-        y="23"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -13124,7 +13560,7 @@
                         offset="5" />
     </private>
     <path name="Fig43.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -13180,6 +13616,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -13196,8 +13633,8 @@
       />
     </group>
     <rectangle name="Fig44.3"
-      x="306"
-      y="34"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -13207,7 +13644,7 @@
       visibility="0"
     />
     <group name="Fig44.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[306, 34, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:00000000000008BB"
          fill="1"
          fillcolor="white"
@@ -13219,8 +13656,8 @@
       </private>
       
       <rectangle name="Fig44.4.0"
-        x="306"
-        y="34"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -13250,7 +13687,7 @@
                         offset="10" />
     </private>
     <path name="Fig45.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -13306,6 +13743,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -13322,8 +13760,8 @@
       />
     </group>
     <rectangle name="Fig46.3"
-      x="203"
-      y="30"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -13333,7 +13771,7 @@
       visibility="0"
     />
     <group name="Fig46.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[203, 30, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:00000000000008B8"
          fill="1"
          fillcolor="white"
@@ -13345,8 +13783,8 @@
       </private>
       
       <rectangle name="Fig46.4.0"
-        x="203"
-        y="30"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -13376,7 +13814,7 @@
                         offset="10" />
     </private>
     <path name="Fig47.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -13433,7 +13871,7 @@
                         offset="5" />
     </private>
     <path name="Fig48.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -13489,6 +13927,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -13505,8 +13944,8 @@
       />
     </group>
     <rectangle name="Fig49.3"
-      x="186"
-      y="26"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -13516,7 +13955,7 @@
       visibility="0"
     />
     <group name="Fig49.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[186, 26, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1--486b53cb:160076d8d93:-8000:00000000000008BA"
          fill="1"
          fillcolor="white"
@@ -13528,8 +13967,8 @@
       </private>
       
       <rectangle name="Fig49.4.0"
-        x="186"
-        y="26"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -13559,7 +13998,7 @@
                         offset="10" />
     </private>
     <path name="Fig50.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -13616,7 +14055,7 @@
                         offset="5" />
     </private>
     <path name="Fig51.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -13807,8 +14246,8 @@
       />
     </group>
     <rectangle name="Fig53.3"
-      x="218"
-      y="-113"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -13818,7 +14257,7 @@
       visibility="0"
     />
     <group name="Fig53.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[218, -113, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BAD"
          fill="1"
          fillcolor="white"
@@ -13830,8 +14269,8 @@
       </private>
       
       <rectangle name="Fig53.4.0"
-        x="218"
-        y="-113"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -13861,7 +14300,7 @@
                         offset="10" />
     </private>
     <path name="Fig54.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -13916,15 +14355,9 @@
                         ownerhref="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BBC"
                         angle="135.0"
                         offset="5" />
-      <argouml:pathitem figname="Fig55.6"
-                        classname="org.argouml.uml.diagram.ui.PathItemPlacement"
-                        figclassname="org.argouml.uml.diagram.ui.FigEdgePort"
-                        ownerhref="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BBA"
-                        angle="270.0"
-                        offset="0" />
     </private>
     <path name="Fig55.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -13981,7 +14414,7 @@
                         offset="5" />
     </private>
     <path name="Fig56.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14054,8 +14487,8 @@
       />
     </group>
     <rectangle name="Fig57.3"
-      x="195"
-      y="-116"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -14065,7 +14498,7 @@
       visibility="0"
     />
     <group name="Fig57.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[185, -126, 0, 0]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[0, 0, 0, 0]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BC1"
          fill="1"
          fillcolor="white"
@@ -14077,8 +14510,8 @@
       </private>
       
       <rectangle name="Fig57.4.0"
-        x="195"
-        y="-116"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -14108,7 +14541,7 @@
                         offset="10" />
     </private>
     <path name="Fig58.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14139,7 +14572,7 @@
                         offset="10" />
     </private>
     <path name="Fig59.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14170,7 +14603,7 @@
                         offset="10" />
     </private>
     <path name="Fig60.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14227,7 +14660,7 @@
                         offset="5" />
     </private>
     <path name="Fig61.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14300,8 +14733,8 @@
       />
     </group>
     <rectangle name="Fig62.3"
-      x="189"
-      y="-66"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -14311,7 +14744,7 @@
       visibility="0"
     />
     <group name="Fig62.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[189, -66, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BD9"
          fill="1"
          fillcolor="white"
@@ -14323,8 +14756,8 @@
       </private>
       
       <rectangle name="Fig62.4.0"
-        x="189"
-        y="-66"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -14380,7 +14813,7 @@
                         offset="5" />
     </private>
     <path name="Fig63.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14436,6 +14869,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -14452,8 +14886,8 @@
       />
     </group>
     <rectangle name="Fig64.3"
-      x="171"
-      y="-123"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -14463,7 +14897,7 @@
       visibility="0"
     />
     <group name="Fig64.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[161, -133, 0, 0]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[0, 0, 0, 0]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BC7"
          fill="1"
          fillcolor="white"
@@ -14475,8 +14909,8 @@
       </private>
       
       <rectangle name="Fig64.4.0"
-        x="171"
-        y="-123"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -14506,7 +14940,7 @@
                         offset="10" />
     </private>
     <path name="Fig65.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14537,7 +14971,7 @@
                         offset="10" />
     </private>
     <path name="Fig66.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14568,7 +15002,7 @@
                         offset="10" />
     </private>
     <path name="Fig67.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14625,7 +15059,7 @@
                         offset="5" />
     </private>
     <path name="Fig68.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14682,7 +15116,7 @@
                         offset="5" />
     </private>
     <path name="Fig69.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14739,7 +15173,7 @@
                         offset="5" />
     </private>
     <path name="Fig70.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14796,7 +15230,7 @@
                         offset="5" />
     </private>
     <path name="Fig71.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14853,7 +15287,7 @@
                         offset="5" />
     </private>
     <path name="Fig72.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -14909,6 +15343,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -14925,8 +15360,8 @@
       />
     </group>
     <rectangle name="Fig73.3"
-      x="199"
-      y="-178"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -14936,7 +15371,7 @@
       visibility="0"
     />
     <group name="Fig73.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[199, -178, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BDF"
          fill="1"
          fillcolor="white"
@@ -14948,8 +15383,8 @@
       </private>
       
       <rectangle name="Fig73.4.0"
-        x="199"
-        y="-178"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -15005,7 +15440,7 @@
                         offset="5" />
     </private>
     <path name="Fig74.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -15078,8 +15513,8 @@
       />
     </group>
     <rectangle name="Fig75.3"
-      x="-38"
-      y="202"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -15089,7 +15524,7 @@
       visibility="0"
     />
     <group name="Fig75.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-38, 202, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BE0"
          fill="1"
          fillcolor="white"
@@ -15101,8 +15536,8 @@
       </private>
       
       <rectangle name="Fig75.4.0"
-        x="-38"
-        y="202"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -15132,7 +15567,7 @@
                         offset="10" />
     </private>
     <path name="Fig76.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -15188,6 +15623,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -15204,8 +15640,8 @@
       />
     </group>
     <rectangle name="Fig77.3"
-      x="-14"
-      y="14"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -15215,7 +15651,7 @@
       visibility="0"
     />
     <group name="Fig77.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-14, 14, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-84-19--34-113-1a39903:1601382e39a:-8000:0000000000000BDD"
          fill="1"
          fillcolor="white"
@@ -15227,8 +15663,8 @@
       </private>
       
       <rectangle name="Fig77.4.0"
-        x="-14"
-        y="14"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -15258,7 +15694,7 @@
                         offset="10" />
     </private>
     <path name="Fig78.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -15433,7 +15869,7 @@
                         offset="5" />
     </private>
     <path name="Fig80.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -15490,7 +15926,7 @@
                         offset="5" />
     </private>
     <path name="Fig81.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -15547,7 +15983,7 @@
                         offset="5" />
     </private>
     <path name="Fig82.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -15604,7 +16040,7 @@
                         offset="5" />
     </private>
     <path name="Fig83.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -15661,7 +16097,7 @@
                         offset="5" />
     </private>
     <path name="Fig84.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -15718,7 +16154,7 @@
                         offset="5" />
     </private>
     <path name="Fig85.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -15774,6 +16210,7 @@
          fillcolor="white"
          stroke="0"
          strokecolor="black"
+         visibility="0"
     >
       <private>
       </private>
@@ -15790,8 +16227,8 @@
       />
     </group>
     <rectangle name="Fig86.3"
-      x="-26"
-      y="-4"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -15801,7 +16238,7 @@
       visibility="0"
     />
     <group name="Fig86.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[-26, -4, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B16"
          fill="1"
          fillcolor="white"
@@ -15813,8 +16250,8 @@
       </private>
       
       <rectangle name="Fig86.4.0"
-        x="-26"
-        y="-4"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -15870,7 +16307,7 @@
                         offset="5" />
     </private>
     <path name="Fig87.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -15924,7 +16361,7 @@
       justification="Center"
     >User</text>
     <group name="Fig0.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[393, 305, 64, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[393, 305, 106, 0]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B4E"
          fill="0"
          fillcolor="white"
@@ -15938,7 +16375,7 @@
       <rectangle name="Fig0.2.0"
         x="393"
         y="305"
-        width="64"
+        width="106"
         height="0"
         fill="0"
         fillcolor="white"
@@ -16045,22 +16482,6 @@
         x="393"
         y="397"
         width="106"
-        height="17"
-        fill="0"
-        fillcolor="white"
-        stroke="0"
-        strokecolor="black"
-        textcolor="black"
-        font="Dialog"
-        italic="false"
-        bold="false"
-        textsize="12"
-        justification="Left"
-      >type : int</text>
-      <text name="Fig0.4.6"
-        x="393"
-        y="414"
-        width="106"
         height="23"
         fill="0"
         fillcolor="white"
@@ -16072,7 +16493,7 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >types : enum</text>
+      >type : int</text>
     </group>
     <rectangle name="Fig0.5"
       x="392"
@@ -16125,22 +16546,6 @@
         x="393"
         y="464"
         width="106"
-        height="17"
-        fill="0"
-        fillcolor="white"
-        stroke="0"
-        strokecolor="black"
-        textcolor="black"
-        font="Dialog"
-        italic="false"
-        bold="false"
-        textsize="12"
-        justification="Left"
-      >viewShows()</text>
-      <text name="Fig0.6.3"
-        x="393"
-        y="481"
-        width="106"
         height="23"
         fill="0"
         fillcolor="white"
@@ -16152,7 +16557,7 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >viewEvents()</text>
+      >getType()</text>
     </group>
   </group>
   <group name="Fig1"
@@ -16193,7 +16598,7 @@
       justification="Center"
     >Agent</text>
     <group name="Fig1.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[17, 625, 64, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[17, 625, 314, 0]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000B64"
          fill="0"
          fillcolor="white"
@@ -16207,7 +16612,7 @@
       <rectangle name="Fig1.2.0"
         x="17"
         y="625"
-        width="64"
+        width="314"
         height="0"
         fill="0"
         fillcolor="white"
@@ -16437,7 +16842,7 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >modifyCustomer(name)</text>
+      >modifyCustomer(customer)</text>
       <text name="Fig1.6.4"
         x="17"
         y="827"
@@ -16510,7 +16915,7 @@
       justification="Center"
     >Customer</text>
     <group name="Fig2.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[369, 625, 64, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[369, 625, 143, 0]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BA4"
          fill="0"
          fillcolor="white"
@@ -16524,7 +16929,7 @@
       <rectangle name="Fig2.2.0"
         x="369"
         y="625"
-        width="64"
+        width="143"
         height="0"
         fill="0"
         fillcolor="white"
@@ -16710,7 +17115,7 @@
     </group>
   </group>
   <group name="Fig3"
-       description="org.argouml.uml.diagram.static_structure.ui.FigClass[544, 624, 354, 309]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
+       description="org.argouml.uml.diagram.static_structure.ui.FigClass[544, 712, 354, 326]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
        href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BBF"
        fill="1"
        fillcolor="white"
@@ -16722,9 +17127,9 @@
     
     <rectangle name="Fig3.0"
       x="544"
-      y="624"
+      y="712"
       width="354"
-      height="309"
+      height="326"
       fill="1"
       fillcolor="white"
       stroke="1"
@@ -16732,7 +17137,7 @@
     />
     <text name="Fig3.1"
       x="545"
-      y="625"
+      y="713"
       width="352"
       height="23"
       fill="0"
@@ -16747,7 +17152,7 @@
       justification="Center"
     >Manager</text>
     <group name="Fig3.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[545, 625, 64, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[545, 713, 352, 0]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BBF"
          fill="0"
          fillcolor="white"
@@ -16760,8 +17165,8 @@
       
       <rectangle name="Fig3.2.0"
         x="545"
-        y="625"
-        width="64"
+        y="713"
+        width="352"
         height="0"
         fill="0"
         fillcolor="white"
@@ -16771,7 +17176,7 @@
     </group>
     <rectangle name="Fig3.3"
       x="544"
-      y="648"
+      y="736"
       width="354"
       height="1"
       fill="1"
@@ -16780,7 +17185,7 @@
       strokecolor="black"
     />
     <group name="Fig3.4"
-         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[545, 649, 352, 21]"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[545, 737, 352, 21]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BBF"
          fill="0"
          fillcolor="white"
@@ -16792,7 +17197,7 @@
       
       <rectangle name="Fig3.4.0"
         x="545"
-        y="649"
+        y="737"
         width="352"
         height="21"
         fill="0"
@@ -16803,7 +17208,7 @@
     </group>
     <rectangle name="Fig3.5"
       x="544"
-      y="669"
+      y="757"
       width="354"
       height="1"
       fill="1"
@@ -16812,7 +17217,7 @@
       strokecolor="black"
     />
     <group name="Fig3.6"
-         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[545, 670, 352, 263]"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[545, 758, 352, 280]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BBF"
          fill="0"
          fillcolor="white"
@@ -16824,9 +17229,9 @@
       
       <rectangle name="Fig3.6.0"
         x="545"
-        y="670"
+        y="758"
         width="352"
-        height="263"
+        height="280"
         fill="0"
         fillcolor="white"
         stroke="0"
@@ -16834,7 +17239,7 @@
       />
       <text name="Fig3.6.1"
         x="545"
-        y="670"
+        y="758"
         width="352"
         height="17"
         fill="0"
@@ -16847,10 +17252,10 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >addEvent()</text>
+      >addEvent(events,startDate,endDate,name)</text>
       <text name="Fig3.6.2"
         x="545"
-        y="687"
+        y="775"
         width="352"
         height="17"
         fill="0"
@@ -16863,10 +17268,10 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >rescheduleEvent(eventName)</text>
+      >rescheduleEvent(event,startDate,endDate)</text>
       <text name="Fig3.6.3"
         x="545"
-        y="704"
+        y="792"
         width="352"
         height="17"
         fill="0"
@@ -16879,10 +17284,10 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >cancelEvent(eventName)</text>
+      >cancelEvent(event)</text>
       <text name="Fig3.6.4"
         x="545"
-        y="721"
+        y="809"
         width="352"
         height="17"
         fill="0"
@@ -16895,10 +17300,10 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >addShow()</text>
+      >addShow(event,start,end,maxSeatPerCustomer)</text>
       <text name="Fig3.6.5"
         x="545"
-        y="738"
+        y="826"
         width="352"
         height="17"
         fill="0"
@@ -16911,10 +17316,10 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >rescheduleShow(showName)</text>
+      >rescheduleShow(show,newStart,newEnd)</text>
       <text name="Fig3.6.6"
         x="545"
-        y="755"
+        y="843"
         width="352"
         height="17"
         fill="0"
@@ -16927,10 +17332,10 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >cancelShow(showName)</text>
+      >cancelShow(show)</text>
       <text name="Fig3.6.7"
         x="545"
-        y="772"
+        y="860"
         width="352"
         height="17"
         fill="0"
@@ -16943,10 +17348,10 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >changeMSPC(showName)</text>
+      >changeMSPC(show,newMSPC)</text>
       <text name="Fig3.6.8"
         x="545"
-        y="789"
+        y="877"
         width="352"
         height="17"
         fill="0"
@@ -16962,7 +17367,7 @@
       >addPromotion()</text>
       <text name="Fig3.6.9"
         x="545"
-        y="806"
+        y="894"
         width="352"
         height="17"
         fill="0"
@@ -16975,10 +17380,10 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >assignPromotions(showName,seatNumbers,promotionName)</text>
+      >assignPromotions(seats,promotionID)</text>
       <text name="Fig3.6.10"
         x="545"
-        y="823"
+        y="911"
         width="352"
         height="17"
         fill="0"
@@ -16991,10 +17396,10 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >changePromotion(promotionName)</text>
+      >changePromotion(promotion)</text>
       <text name="Fig3.6.11"
         x="545"
-        y="840"
+        y="928"
         width="352"
         height="17"
         fill="0"
@@ -17007,10 +17412,10 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >deletePromotion(promotionName)</text>
+      >deletePromotion(promotion)</text>
       <text name="Fig3.6.12"
         x="545"
-        y="857"
+        y="945"
         width="352"
         height="17"
         fill="0"
@@ -17026,7 +17431,7 @@
       >addContract()</text>
       <text name="Fig3.6.13"
         x="545"
-        y="874"
+        y="962"
         width="352"
         height="17"
         fill="0"
@@ -17039,10 +17444,10 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >changeContract(agentName)</text>
+      >changeContract(agent)</text>
       <text name="Fig3.6.14"
         x="545"
-        y="891"
+        y="979"
         width="352"
         height="17"
         fill="0"
@@ -17055,10 +17460,26 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >cancelContract(agentName)</text>
+      >cancelContract(agent)</text>
       <text name="Fig3.6.15"
         x="545"
-        y="908"
+        y="996"
+        width="352"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >renewContract(agent)</text>
+      <text name="Fig3.6.16"
+        x="545"
+        y="1013"
         width="352"
         height="23"
         fill="0"
@@ -17071,7 +17492,7 @@
         bold="false"
         textsize="12"
         justification="Left"
-      >renewContract(agentName)</text>
+      >&lt;&lt;create&gt;&gt; Manager()</text>
     </group>
   </group>
   <group name="Fig4"
@@ -17093,14 +17514,14 @@
                         offset="-10" />
     </private>
     <path name="Fig4.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
       strokecolor="black"
     >
       <moveto x="544"
-              y="624" />
+              y="712" />
       <lineto x="499"
               y="514" />
     </path>
@@ -17124,7 +17545,7 @@
                         offset="-10" />
     </private>
     <path name="Fig5.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -17155,7 +17576,7 @@
                         offset="-10" />
     </private>
     <path name="Fig6.0"
-      description="org.tigris.gef.presentation.FigPoly"
+      description="org.argouml.gefext.ArgoFigPoly"
       fill="0"
       fillcolor="white"
       stroke="1"
@@ -17168,7 +17589,7 @@
     </path>
   </group>
   <group name="Fig7"
-       description="org.argouml.uml.diagram.static_structure.ui.FigClass[968, 336, 213, 619]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
+       description="org.argouml.uml.diagram.static_structure.ui.FigClass[1160, 56, 213, 619]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
        href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BF1"
        fill="1"
        fillcolor="white"
@@ -17179,8 +17600,8 @@
     </private>
     
     <rectangle name="Fig7.0"
-      x="968"
-      y="336"
+      x="1160"
+      y="56"
       width="213"
       height="619"
       fill="1"
@@ -17189,8 +17610,8 @@
       strokecolor="black"
     />
     <text name="Fig7.1"
-      x="969"
-      y="337"
+      x="1161"
+      y="57"
       width="211"
       height="23"
       fill="0"
@@ -17205,7 +17626,7 @@
       justification="Center"
     >Promotion</text>
     <group name="Fig7.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[969, 337, 64, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1161, 57, 211, 0]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BF1"
          fill="0"
          fillcolor="white"
@@ -17217,9 +17638,9 @@
       </private>
       
       <rectangle name="Fig7.2.0"
-        x="969"
-        y="337"
-        width="64"
+        x="1161"
+        y="57"
+        width="211"
         height="0"
         fill="0"
         fillcolor="white"
@@ -17228,8 +17649,8 @@
       />
     </group>
     <rectangle name="Fig7.3"
-      x="968"
-      y="360"
+      x="1160"
+      y="80"
       width="213"
       height="1"
       fill="1"
@@ -17238,7 +17659,7 @@
       strokecolor="black"
     />
     <group name="Fig7.4"
-         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[969, 361, 211, 229]"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[1161, 81, 211, 229]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BF1"
          fill="0"
          fillcolor="white"
@@ -17249,8 +17670,8 @@
       </private>
       
       <rectangle name="Fig7.4.0"
-        x="969"
-        y="361"
+        x="1161"
+        y="81"
         width="211"
         height="229"
         fill="0"
@@ -17259,8 +17680,8 @@
         strokecolor="black"
       />
       <text name="Fig7.4.1"
-        x="969"
-        y="361"
+        x="1161"
+        y="81"
         width="211"
         height="17"
         fill="0"
@@ -17275,8 +17696,8 @@
         justification="Left"
       >promotionName : String</text>
       <text name="Fig7.4.2"
-        x="969"
-        y="378"
+        x="1161"
+        y="98"
         width="211"
         height="17"
         fill="0"
@@ -17291,8 +17712,8 @@
         justification="Left"
       >promotionID : int</text>
       <text name="Fig7.4.3"
-        x="969"
-        y="395"
+        x="1161"
+        y="115"
         width="211"
         height="17"
         fill="0"
@@ -17307,8 +17728,8 @@
         justification="Left"
       >startDate : DateTIme</text>
       <text name="Fig7.4.4"
-        x="969"
-        y="412"
+        x="1161"
+        y="132"
         width="211"
         height="17"
         fill="0"
@@ -17323,8 +17744,8 @@
         justification="Left"
       >endDate : DateTime</text>
       <text name="Fig7.4.5"
-        x="969"
-        y="429"
+        x="1161"
+        y="149"
         width="211"
         height="17"
         fill="0"
@@ -17339,8 +17760,8 @@
         justification="Left"
       >weekday : int</text>
       <text name="Fig7.4.6"
-        x="969"
-        y="446"
+        x="1161"
+        y="166"
         width="211"
         height="17"
         fill="0"
@@ -17355,8 +17776,8 @@
         justification="Left"
       >startTime : Time</text>
       <text name="Fig7.4.7"
-        x="969"
-        y="463"
+        x="1161"
+        y="183"
         width="211"
         height="17"
         fill="0"
@@ -17371,8 +17792,8 @@
         justification="Left"
       >endTIme : Time</text>
       <text name="Fig7.4.8"
-        x="969"
-        y="480"
+        x="1161"
+        y="200"
         width="211"
         height="17"
         fill="0"
@@ -17387,8 +17808,8 @@
         justification="Left"
       >priceChild : float</text>
       <text name="Fig7.4.9"
-        x="969"
-        y="497"
+        x="1161"
+        y="217"
         width="211"
         height="17"
         fill="0"
@@ -17403,8 +17824,8 @@
         justification="Left"
       >priceAdult : float</text>
       <text name="Fig7.4.10"
-        x="969"
-        y="514"
+        x="1161"
+        y="234"
         width="211"
         height="17"
         fill="0"
@@ -17419,8 +17840,8 @@
         justification="Left"
       >priceStudent : float</text>
       <text name="Fig7.4.11"
-        x="969"
-        y="531"
+        x="1161"
+        y="251"
         width="211"
         height="17"
         fill="0"
@@ -17435,8 +17856,8 @@
         justification="Left"
       >priceSenior : float</text>
       <text name="Fig7.4.12"
-        x="969"
-        y="548"
+        x="1161"
+        y="268"
         width="211"
         height="17"
         fill="0"
@@ -17451,8 +17872,8 @@
         justification="Left"
       >discountID : int</text>
       <text name="Fig7.4.13"
-        x="969"
-        y="565"
+        x="1161"
+        y="285"
         width="211"
         height="23"
         fill="0"
@@ -17468,8 +17889,8 @@
       >static discounts : ArrayList&lt;Discount&gt;</text>
     </group>
     <rectangle name="Fig7.5"
-      x="968"
-      y="589"
+      x="1160"
+      y="309"
       width="213"
       height="1"
       fill="1"
@@ -17478,7 +17899,7 @@
       strokecolor="black"
     />
     <group name="Fig7.6"
-         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[969, 590, 211, 365]"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[1161, 310, 211, 365]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000BF1"
          fill="0"
          fillcolor="white"
@@ -17489,8 +17910,8 @@
       </private>
       
       <rectangle name="Fig7.6.0"
-        x="969"
-        y="590"
+        x="1161"
+        y="310"
         width="211"
         height="365"
         fill="0"
@@ -17499,8 +17920,8 @@
         strokecolor="black"
       />
       <text name="Fig7.6.1"
-        x="969"
-        y="590"
+        x="1161"
+        y="310"
         width="211"
         height="17"
         fill="0"
@@ -17515,8 +17936,8 @@
         justification="Left"
       >&lt;&lt;create&gt;&gt; Promotion()</text>
       <text name="Fig7.6.2"
-        x="969"
-        y="607"
+        x="1161"
+        y="327"
         width="211"
         height="17"
         fill="0"
@@ -17531,8 +17952,8 @@
         justification="Left"
       >getStartDate()</text>
       <text name="Fig7.6.3"
-        x="969"
-        y="624"
+        x="1161"
+        y="344"
         width="211"
         height="17"
         fill="0"
@@ -17547,8 +17968,8 @@
         justification="Left"
       >setStartDate(date)</text>
       <text name="Fig7.6.4"
-        x="969"
-        y="641"
+        x="1161"
+        y="361"
         width="211"
         height="17"
         fill="0"
@@ -17563,8 +17984,8 @@
         justification="Left"
       >getEndDate()</text>
       <text name="Fig7.6.5"
-        x="969"
-        y="658"
+        x="1161"
+        y="378"
         width="211"
         height="17"
         fill="0"
@@ -17579,8 +18000,8 @@
         justification="Left"
       >setEndDate(date)</text>
       <text name="Fig7.6.6"
-        x="969"
-        y="675"
+        x="1161"
+        y="395"
         width="211"
         height="17"
         fill="0"
@@ -17595,8 +18016,8 @@
         justification="Left"
       >getWeekday()</text>
       <text name="Fig7.6.7"
-        x="969"
-        y="692"
+        x="1161"
+        y="412"
         width="211"
         height="17"
         fill="0"
@@ -17611,8 +18032,8 @@
         justification="Left"
       >setWeekday(day)</text>
       <text name="Fig7.6.8"
-        x="969"
-        y="709"
+        x="1161"
+        y="429"
         width="211"
         height="17"
         fill="0"
@@ -17627,8 +18048,8 @@
         justification="Left"
       >getStartTime()</text>
       <text name="Fig7.6.9"
-        x="969"
-        y="726"
+        x="1161"
+        y="446"
         width="211"
         height="17"
         fill="0"
@@ -17643,8 +18064,8 @@
         justification="Left"
       >setStartTime(time)</text>
       <text name="Fig7.6.10"
-        x="969"
-        y="743"
+        x="1161"
+        y="463"
         width="211"
         height="17"
         fill="0"
@@ -17659,8 +18080,8 @@
         justification="Left"
       >getEndTime()</text>
       <text name="Fig7.6.11"
-        x="969"
-        y="760"
+        x="1161"
+        y="480"
         width="211"
         height="17"
         fill="0"
@@ -17675,8 +18096,8 @@
         justification="Left"
       >setEndTime(time)</text>
       <text name="Fig7.6.12"
-        x="969"
-        y="777"
+        x="1161"
+        y="497"
         width="211"
         height="17"
         fill="0"
@@ -17691,8 +18112,8 @@
         justification="Left"
       >getChildPrice()</text>
       <text name="Fig7.6.13"
-        x="969"
-        y="794"
+        x="1161"
+        y="514"
         width="211"
         height="17"
         fill="0"
@@ -17707,8 +18128,8 @@
         justification="Left"
       >getAdultPrice()</text>
       <text name="Fig7.6.14"
-        x="969"
-        y="811"
+        x="1161"
+        y="531"
         width="211"
         height="17"
         fill="0"
@@ -17723,8 +18144,8 @@
         justification="Left"
       >getStudentPrice()</text>
       <text name="Fig7.6.15"
-        x="969"
-        y="828"
+        x="1161"
+        y="548"
         width="211"
         height="17"
         fill="0"
@@ -17739,8 +18160,8 @@
         justification="Left"
       >getSeniorPrice()</text>
       <text name="Fig7.6.16"
-        x="969"
-        y="845"
+        x="1161"
+        y="565"
         width="211"
         height="17"
         fill="0"
@@ -17755,8 +18176,8 @@
         justification="Left"
       >setChildPrice(price)</text>
       <text name="Fig7.6.17"
-        x="969"
-        y="862"
+        x="1161"
+        y="582"
         width="211"
         height="17"
         fill="0"
@@ -17771,8 +18192,8 @@
         justification="Left"
       >setAdultPrice(price)</text>
       <text name="Fig7.6.18"
-        x="969"
-        y="879"
+        x="1161"
+        y="599"
         width="211"
         height="17"
         fill="0"
@@ -17787,8 +18208,8 @@
         justification="Left"
       >setStudentPrice(price)</text>
       <text name="Fig7.6.19"
-        x="969"
-        y="896"
+        x="1161"
+        y="616"
         width="211"
         height="17"
         fill="0"
@@ -17803,8 +18224,8 @@
         justification="Left"
       >setSeniorPrice(price)</text>
       <text name="Fig7.6.20"
-        x="969"
-        y="913"
+        x="1161"
+        y="633"
         width="211"
         height="17"
         fill="0"
@@ -17819,8 +18240,8 @@
         justification="Left"
       >setDiscount(discountName)</text>
       <text name="Fig7.6.21"
-        x="969"
-        y="930"
+        x="1161"
+        y="650"
         width="211"
         height="23"
         fill="0"
@@ -17837,7 +18258,7 @@
     </group>
   </group>
   <group name="Fig8"
-       description="org.argouml.uml.diagram.static_structure.ui.FigClass[952, 1000, 139, 262]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
+       description="org.argouml.uml.diagram.static_structure.ui.FigClass[1160, 704, 139, 262]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
        href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000C52"
        fill="1"
        fillcolor="white"
@@ -17848,8 +18269,8 @@
     </private>
     
     <rectangle name="Fig8.0"
-      x="952"
-      y="1000"
+      x="1160"
+      y="704"
       width="139"
       height="262"
       fill="1"
@@ -17858,8 +18279,8 @@
       strokecolor="black"
     />
     <text name="Fig8.1"
-      x="953"
-      y="1001"
+      x="1161"
+      y="705"
       width="137"
       height="23"
       fill="0"
@@ -17874,7 +18295,7 @@
       justification="Center"
     >Discount</text>
     <group name="Fig8.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[953, 1001, 64, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1161, 705, 137, 0]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000C52"
          fill="0"
          fillcolor="white"
@@ -17886,9 +18307,9 @@
       </private>
       
       <rectangle name="Fig8.2.0"
-        x="953"
-        y="1001"
-        width="64"
+        x="1161"
+        y="705"
+        width="137"
         height="0"
         fill="0"
         fillcolor="white"
@@ -17897,8 +18318,8 @@
       />
     </group>
     <rectangle name="Fig8.3"
-      x="952"
-      y="1024"
+      x="1160"
+      y="728"
       width="139"
       height="1"
       fill="1"
@@ -17907,7 +18328,7 @@
       strokecolor="black"
     />
     <group name="Fig8.4"
-         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[953, 1025, 137, 93]"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[1161, 729, 137, 93]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000C52"
          fill="0"
          fillcolor="white"
@@ -17918,8 +18339,8 @@
       </private>
       
       <rectangle name="Fig8.4.0"
-        x="953"
-        y="1025"
+        x="1161"
+        y="729"
         width="137"
         height="93"
         fill="0"
@@ -17928,8 +18349,8 @@
         strokecolor="black"
       />
       <text name="Fig8.4.1"
-        x="953"
-        y="1025"
+        x="1161"
+        y="729"
         width="137"
         height="17"
         fill="0"
@@ -17944,8 +18365,8 @@
         justification="Left"
       >discountID : int</text>
       <text name="Fig8.4.2"
-        x="953"
-        y="1042"
+        x="1161"
+        y="746"
         width="137"
         height="17"
         fill="0"
@@ -17960,8 +18381,8 @@
         justification="Left"
       >discountName : String</text>
       <text name="Fig8.4.3"
-        x="953"
-        y="1059"
+        x="1161"
+        y="763"
         width="137"
         height="17"
         fill="0"
@@ -17976,8 +18397,8 @@
         justification="Left"
       >minTickets : int</text>
       <text name="Fig8.4.4"
-        x="953"
-        y="1076"
+        x="1161"
+        y="780"
         width="137"
         height="17"
         fill="0"
@@ -17992,8 +18413,8 @@
         justification="Left"
       >minSpent : float</text>
       <text name="Fig8.4.5"
-        x="953"
-        y="1093"
+        x="1161"
+        y="797"
         width="137"
         height="23"
         fill="0"
@@ -18009,8 +18430,8 @@
       >discountPercent : float</text>
     </group>
     <rectangle name="Fig8.5"
-      x="952"
-      y="1117"
+      x="1160"
+      y="821"
       width="139"
       height="1"
       fill="1"
@@ -18019,7 +18440,7 @@
       strokecolor="black"
     />
     <group name="Fig8.6"
-         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[953, 1118, 137, 144]"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[1161, 822, 137, 144]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000C52"
          fill="0"
          fillcolor="white"
@@ -18030,8 +18451,8 @@
       </private>
       
       <rectangle name="Fig8.6.0"
-        x="953"
-        y="1118"
+        x="1161"
+        y="822"
         width="137"
         height="144"
         fill="0"
@@ -18040,8 +18461,8 @@
         strokecolor="black"
       />
       <text name="Fig8.6.1"
-        x="953"
-        y="1118"
+        x="1161"
+        y="822"
         width="137"
         height="17"
         fill="0"
@@ -18056,8 +18477,8 @@
         justification="Left"
       >&lt;&lt;create&gt;&gt; Discount()</text>
       <text name="Fig8.6.2"
-        x="953"
-        y="1135"
+        x="1161"
+        y="839"
         width="137"
         height="17"
         fill="0"
@@ -18072,8 +18493,8 @@
         justification="Left"
       >getDiscountName()</text>
       <text name="Fig8.6.3"
-        x="953"
-        y="1152"
+        x="1161"
+        y="856"
         width="137"
         height="17"
         fill="0"
@@ -18088,8 +18509,8 @@
         justification="Left"
       >getMinTickets()</text>
       <text name="Fig8.6.4"
-        x="953"
-        y="1169"
+        x="1161"
+        y="873"
         width="137"
         height="17"
         fill="0"
@@ -18104,8 +18525,8 @@
         justification="Left"
       >getMinSpent()</text>
       <text name="Fig8.6.5"
-        x="953"
-        y="1186"
+        x="1161"
+        y="890"
         width="137"
         height="17"
         fill="0"
@@ -18120,8 +18541,8 @@
         justification="Left"
       >getDiscountPercent()</text>
       <text name="Fig8.6.6"
-        x="953"
-        y="1203"
+        x="1161"
+        y="907"
         width="137"
         height="17"
         fill="0"
@@ -18136,8 +18557,8 @@
         justification="Left"
       >setName(newName)</text>
       <text name="Fig8.6.7"
-        x="953"
-        y="1220"
+        x="1161"
+        y="924"
         width="137"
         height="17"
         fill="0"
@@ -18152,8 +18573,8 @@
         justification="Left"
       >setMinTickets(newMin)</text>
       <text name="Fig8.6.8"
-        x="953"
-        y="1237"
+        x="1161"
+        y="941"
         width="137"
         height="23"
         fill="0"
@@ -18170,7 +18591,7 @@
     </group>
   </group>
   <group name="Fig9"
-       description="org.argouml.uml.diagram.static_structure.ui.FigClass[1304, 800, 178, 364]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
+       description="org.argouml.uml.diagram.static_structure.ui.FigClass[1448, 48, 178, 364]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
        href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000C75"
        fill="1"
        fillcolor="white"
@@ -18181,8 +18602,8 @@
     </private>
     
     <rectangle name="Fig9.0"
-      x="1304"
-      y="800"
+      x="1448"
+      y="48"
       width="178"
       height="364"
       fill="1"
@@ -18191,8 +18612,8 @@
       strokecolor="black"
     />
     <text name="Fig9.1"
-      x="1305"
-      y="801"
+      x="1449"
+      y="49"
       width="176"
       height="23"
       fill="0"
@@ -18207,7 +18628,7 @@
       justification="Center"
     >Event</text>
     <group name="Fig9.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1305, 801, 64, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1449, 49, 176, 0]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000C75"
          fill="0"
          fillcolor="white"
@@ -18219,9 +18640,9 @@
       </private>
       
       <rectangle name="Fig9.2.0"
-        x="1305"
-        y="801"
-        width="64"
+        x="1449"
+        y="49"
+        width="176"
         height="0"
         fill="0"
         fillcolor="white"
@@ -18230,8 +18651,8 @@
       />
     </group>
     <rectangle name="Fig9.3"
-      x="1304"
-      y="824"
+      x="1448"
+      y="72"
       width="178"
       height="1"
       fill="1"
@@ -18240,7 +18661,7 @@
       strokecolor="black"
     />
     <group name="Fig9.4"
-         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[1305, 825, 176, 110]"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[1449, 73, 176, 110]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000C75"
          fill="0"
          fillcolor="white"
@@ -18251,8 +18672,8 @@
       </private>
       
       <rectangle name="Fig9.4.0"
-        x="1305"
-        y="825"
+        x="1449"
+        y="73"
         width="176"
         height="110"
         fill="0"
@@ -18261,8 +18682,8 @@
         strokecolor="black"
       />
       <text name="Fig9.4.1"
-        x="1305"
-        y="825"
+        x="1449"
+        y="73"
         width="176"
         height="17"
         fill="0"
@@ -18277,8 +18698,8 @@
         justification="Left"
       >static shows : ArrayList&lt;Show&gt;</text>
       <text name="Fig9.4.2"
-        x="1305"
-        y="842"
+        x="1449"
+        y="90"
         width="176"
         height="17"
         fill="0"
@@ -18293,8 +18714,8 @@
         justification="Left"
       >startDate : DateTime</text>
       <text name="Fig9.4.3"
-        x="1305"
-        y="859"
+        x="1449"
+        y="107"
         width="176"
         height="17"
         fill="0"
@@ -18309,8 +18730,8 @@
         justification="Left"
       >endDate : DateTime</text>
       <text name="Fig9.4.4"
-        x="1305"
-        y="876"
+        x="1449"
+        y="124"
         width="176"
         height="17"
         fill="0"
@@ -18325,8 +18746,8 @@
         justification="Left"
       >eventName : String</text>
       <text name="Fig9.4.5"
-        x="1305"
-        y="893"
+        x="1449"
+        y="141"
         width="176"
         height="17"
         fill="0"
@@ -18341,8 +18762,8 @@
         justification="Left"
       >eventID : int</text>
       <text name="Fig9.4.6"
-        x="1305"
-        y="910"
+        x="1449"
+        y="158"
         width="176"
         height="23"
         fill="0"
@@ -18358,8 +18779,8 @@
       >status : int</text>
     </group>
     <rectangle name="Fig9.5"
-      x="1304"
-      y="934"
+      x="1448"
+      y="182"
       width="178"
       height="1"
       fill="1"
@@ -18368,7 +18789,7 @@
       strokecolor="black"
     />
     <group name="Fig9.6"
-         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[1305, 935, 176, 229]"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[1449, 183, 176, 229]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000C75"
          fill="0"
          fillcolor="white"
@@ -18379,8 +18800,8 @@
       </private>
       
       <rectangle name="Fig9.6.0"
-        x="1305"
-        y="935"
+        x="1449"
+        y="183"
         width="176"
         height="229"
         fill="0"
@@ -18389,8 +18810,8 @@
         strokecolor="black"
       />
       <text name="Fig9.6.1"
-        x="1305"
-        y="935"
+        x="1449"
+        y="183"
         width="176"
         height="17"
         fill="0"
@@ -18405,8 +18826,8 @@
         justification="Left"
       >addShow()</text>
       <text name="Fig9.6.2"
-        x="1305"
-        y="952"
+        x="1449"
+        y="200"
         width="176"
         height="17"
         fill="0"
@@ -18421,8 +18842,8 @@
         justification="Left"
       >getShows()</text>
       <text name="Fig9.6.3"
-        x="1305"
-        y="969"
+        x="1449"
+        y="217"
         width="176"
         height="17"
         fill="0"
@@ -18437,8 +18858,8 @@
         justification="Left"
       >getName()</text>
       <text name="Fig9.6.4"
-        x="1305"
-        y="986"
+        x="1449"
+        y="234"
         width="176"
         height="17"
         fill="0"
@@ -18453,8 +18874,8 @@
         justification="Left"
       >setName(newName)</text>
       <text name="Fig9.6.5"
-        x="1305"
-        y="1003"
+        x="1449"
+        y="251"
         width="176"
         height="17"
         fill="0"
@@ -18469,8 +18890,8 @@
         justification="Left"
       >&lt;&lt;create&gt;&gt; Event()</text>
       <text name="Fig9.6.6"
-        x="1305"
-        y="1020"
+        x="1449"
+        y="268"
         width="176"
         height="17"
         fill="0"
@@ -18485,8 +18906,8 @@
         justification="Left"
       >getStartDate()</text>
       <text name="Fig9.6.7"
-        x="1305"
-        y="1037"
+        x="1449"
+        y="285"
         width="176"
         height="17"
         fill="0"
@@ -18501,8 +18922,8 @@
         justification="Left"
       >getEndDate()</text>
       <text name="Fig9.6.8"
-        x="1305"
-        y="1054"
+        x="1449"
+        y="302"
         width="176"
         height="17"
         fill="0"
@@ -18517,8 +18938,8 @@
         justification="Left"
       >getStatus()</text>
       <text name="Fig9.6.9"
-        x="1305"
-        y="1071"
+        x="1449"
+        y="319"
         width="176"
         height="17"
         fill="0"
@@ -18533,8 +18954,8 @@
         justification="Left"
       >setStartDate(newDate)</text>
       <text name="Fig9.6.10"
-        x="1305"
-        y="1088"
+        x="1449"
+        y="336"
         width="176"
         height="17"
         fill="0"
@@ -18549,8 +18970,8 @@
         justification="Left"
       >setEndDate(newDate)</text>
       <text name="Fig9.6.11"
-        x="1305"
-        y="1105"
+        x="1449"
+        y="353"
         width="176"
         height="17"
         fill="0"
@@ -18565,8 +18986,8 @@
         justification="Left"
       >setStaus(newStatus)</text>
       <text name="Fig9.6.12"
-        x="1305"
-        y="1122"
+        x="1449"
+        y="370"
         width="176"
         height="17"
         fill="0"
@@ -18581,8 +19002,8 @@
         justification="Left"
       >getShows(showDate)</text>
       <text name="Fig9.6.13"
-        x="1305"
-        y="1139"
+        x="1449"
+        y="387"
         width="176"
         height="23"
         fill="0"
@@ -18599,7 +19020,7 @@
     </group>
   </group>
   <group name="Fig10"
-       description="org.argouml.uml.diagram.static_structure.ui.FigClass[312, 904, 152, 313]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
+       description="org.argouml.uml.diagram.static_structure.ui.FigClass[1472, 528, 152, 313]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
        href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CAA"
        fill="1"
        fillcolor="white"
@@ -18610,8 +19031,8 @@
     </private>
     
     <rectangle name="Fig10.0"
-      x="312"
-      y="904"
+      x="1472"
+      y="528"
       width="152"
       height="313"
       fill="1"
@@ -18620,8 +19041,8 @@
       strokecolor="black"
     />
     <text name="Fig10.1"
-      x="313"
-      y="905"
+      x="1473"
+      y="529"
       width="150"
       height="23"
       fill="0"
@@ -18636,7 +19057,7 @@
       justification="Center"
     >Show</text>
     <group name="Fig10.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[313, 905, 64, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1473, 529, 150, 0]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CAA"
          fill="0"
          fillcolor="white"
@@ -18648,9 +19069,9 @@
       </private>
       
       <rectangle name="Fig10.2.0"
-        x="313"
-        y="905"
-        width="64"
+        x="1473"
+        y="529"
+        width="150"
         height="0"
         fill="0"
         fillcolor="white"
@@ -18659,8 +19080,8 @@
       />
     </group>
     <rectangle name="Fig10.3"
-      x="312"
-      y="928"
+      x="1472"
+      y="552"
       width="152"
       height="1"
       fill="1"
@@ -18669,7 +19090,7 @@
       strokecolor="black"
     />
     <group name="Fig10.4"
-         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[313, 929, 150, 110]"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[1473, 553, 150, 110]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CAA"
          fill="0"
          fillcolor="white"
@@ -18680,8 +19101,8 @@
       </private>
       
       <rectangle name="Fig10.4.0"
-        x="313"
-        y="929"
+        x="1473"
+        y="553"
         width="150"
         height="110"
         fill="0"
@@ -18690,8 +19111,8 @@
         strokecolor="black"
       />
       <text name="Fig10.4.1"
-        x="313"
-        y="929"
+        x="1473"
+        y="553"
         width="150"
         height="17"
         fill="0"
@@ -18706,8 +19127,8 @@
         justification="Left"
       >start : DateTime</text>
       <text name="Fig10.4.2"
-        x="313"
-        y="946"
+        x="1473"
+        y="570"
         width="150"
         height="17"
         fill="0"
@@ -18722,8 +19143,8 @@
         justification="Left"
       >end : DateTime</text>
       <text name="Fig10.4.3"
-        x="313"
-        y="963"
+        x="1473"
+        y="587"
         width="150"
         height="17"
         fill="0"
@@ -18738,8 +19159,8 @@
         justification="Left"
       >showID : int</text>
       <text name="Fig10.4.4"
-        x="313"
-        y="980"
+        x="1473"
+        y="604"
         width="150"
         height="17"
         fill="0"
@@ -18754,8 +19175,8 @@
         justification="Left"
       >status : int</text>
       <text name="Fig10.4.5"
-        x="313"
-        y="997"
+        x="1473"
+        y="621"
         width="150"
         height="17"
         fill="0"
@@ -18770,8 +19191,8 @@
         justification="Left"
       >seats : ArrayList&lt;Seat&gt;</text>
       <text name="Fig10.4.6"
-        x="313"
-        y="1014"
+        x="1473"
+        y="638"
         width="150"
         height="23"
         fill="0"
@@ -18787,8 +19208,8 @@
       >maxSeatPerCustomer : int</text>
     </group>
     <rectangle name="Fig10.5"
-      x="312"
-      y="1038"
+      x="1472"
+      y="662"
       width="152"
       height="1"
       fill="1"
@@ -18797,7 +19218,7 @@
       strokecolor="black"
     />
     <group name="Fig10.6"
-         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[313, 1039, 150, 178]"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[1473, 663, 150, 178]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CAA"
          fill="0"
          fillcolor="white"
@@ -18808,8 +19229,8 @@
       </private>
       
       <rectangle name="Fig10.6.0"
-        x="313"
-        y="1039"
+        x="1473"
+        y="663"
         width="150"
         height="178"
         fill="0"
@@ -18818,8 +19239,8 @@
         strokecolor="black"
       />
       <text name="Fig10.6.1"
-        x="313"
-        y="1039"
+        x="1473"
+        y="663"
         width="150"
         height="17"
         fill="0"
@@ -18834,8 +19255,8 @@
         justification="Left"
       >&lt;&lt;create&gt;&gt; Show()</text>
       <text name="Fig10.6.2"
-        x="313"
-        y="1056"
+        x="1473"
+        y="680"
         width="150"
         height="17"
         fill="0"
@@ -18850,8 +19271,8 @@
         justification="Left"
       >getStart()</text>
       <text name="Fig10.6.3"
-        x="313"
-        y="1073"
+        x="1473"
+        y="697"
         width="150"
         height="17"
         fill="0"
@@ -18866,8 +19287,8 @@
         justification="Left"
       >getEnd()</text>
       <text name="Fig10.6.4"
-        x="313"
-        y="1090"
+        x="1473"
+        y="714"
         width="150"
         height="17"
         fill="0"
@@ -18882,8 +19303,8 @@
         justification="Left"
       >getStatus()</text>
       <text name="Fig10.6.5"
-        x="313"
-        y="1107"
+        x="1473"
+        y="731"
         width="150"
         height="17"
         fill="0"
@@ -18898,8 +19319,8 @@
         justification="Left"
       >holdSeat(seatNumber)</text>
       <text name="Fig10.6.6"
-        x="313"
-        y="1124"
+        x="1473"
+        y="748"
         width="150"
         height="17"
         fill="0"
@@ -18914,8 +19335,8 @@
         justification="Left"
       >unholdSeat(seatNumber)</text>
       <text name="Fig10.6.7"
-        x="313"
-        y="1141"
+        x="1473"
+        y="765"
         width="150"
         height="17"
         fill="0"
@@ -18930,8 +19351,8 @@
         justification="Left"
       >sellSeat(seatNumber)</text>
       <text name="Fig10.6.8"
-        x="313"
-        y="1158"
+        x="1473"
+        y="782"
         width="150"
         height="17"
         fill="0"
@@ -18946,8 +19367,8 @@
         justification="Left"
       >setStart(newStart)</text>
       <text name="Fig10.6.9"
-        x="313"
-        y="1175"
+        x="1473"
+        y="799"
         width="150"
         height="17"
         fill="0"
@@ -18962,8 +19383,8 @@
         justification="Left"
       >setEnd(newEnd)</text>
       <text name="Fig10.6.10"
-        x="313"
-        y="1192"
+        x="1473"
+        y="816"
         width="150"
         height="23"
         fill="0"
@@ -18980,7 +19401,7 @@
     </group>
   </group>
   <group name="Fig11"
-       description="org.argouml.uml.diagram.static_structure.ui.FigClass[696, 1024, 162, 211]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
+       description="org.argouml.uml.diagram.static_structure.ui.FigClass[1472, 960, 162, 211]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
        href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CDB"
        fill="1"
        fillcolor="white"
@@ -18991,8 +19412,8 @@
     </private>
     
     <rectangle name="Fig11.0"
-      x="696"
-      y="1024"
+      x="1472"
+      y="960"
       width="162"
       height="211"
       fill="1"
@@ -19001,8 +19422,8 @@
       strokecolor="black"
     />
     <text name="Fig11.1"
-      x="697"
-      y="1025"
+      x="1473"
+      y="961"
       width="160"
       height="23"
       fill="0"
@@ -19017,7 +19438,7 @@
       justification="Center"
     >Seat</text>
     <group name="Fig11.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[697, 1025, 64, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1473, 961, 160, 0]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CDB"
          fill="0"
          fillcolor="white"
@@ -19029,9 +19450,9 @@
       </private>
       
       <rectangle name="Fig11.2.0"
-        x="697"
-        y="1025"
-        width="64"
+        x="1473"
+        y="961"
+        width="160"
         height="0"
         fill="0"
         fillcolor="white"
@@ -19040,8 +19461,8 @@
       />
     </group>
     <rectangle name="Fig11.3"
-      x="696"
-      y="1048"
+      x="1472"
+      y="984"
       width="162"
       height="1"
       fill="1"
@@ -19050,7 +19471,7 @@
       strokecolor="black"
     />
     <group name="Fig11.4"
-         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[697, 1049, 160, 59]"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[1473, 985, 160, 66]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CDB"
          fill="0"
          fillcolor="white"
@@ -19061,18 +19482,18 @@
       </private>
       
       <rectangle name="Fig11.4.0"
-        x="697"
-        y="1049"
+        x="1473"
+        y="985"
         width="160"
-        height="59"
+        height="66"
         fill="0"
         fillcolor="white"
         stroke="0"
         strokecolor="black"
       />
       <text name="Fig11.4.1"
-        x="697"
-        y="1049"
+        x="1473"
+        y="985"
         width="160"
         height="17"
         fill="0"
@@ -19087,8 +19508,8 @@
         justification="Left"
       >seatNumber : int</text>
       <text name="Fig11.4.2"
-        x="697"
-        y="1066"
+        x="1473"
+        y="1002"
         width="160"
         height="17"
         fill="0"
@@ -19103,8 +19524,8 @@
         justification="Left"
       >status : int</text>
       <text name="Fig11.4.3"
-        x="697"
-        y="1083"
+        x="1473"
+        y="1019"
         width="160"
         height="23"
         fill="0"
@@ -19120,8 +19541,8 @@
       >promotionID : int</text>
     </group>
     <rectangle name="Fig11.5"
-      x="696"
-      y="1107"
+      x="1472"
+      y="1051"
       width="162"
       height="1"
       fill="1"
@@ -19130,7 +19551,7 @@
       strokecolor="black"
     />
     <group name="Fig11.6"
-         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[697, 1108, 160, 127]"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[1473, 1052, 160, 117]"
          href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CDB"
          fill="0"
          fillcolor="white"
@@ -19141,18 +19562,18 @@
       </private>
       
       <rectangle name="Fig11.6.0"
-        x="697"
-        y="1108"
+        x="1473"
+        y="1052"
         width="160"
-        height="127"
+        height="117"
         fill="0"
         fillcolor="white"
         stroke="0"
         strokecolor="black"
       />
       <text name="Fig11.6.1"
-        x="697"
-        y="1108"
+        x="1473"
+        y="1052"
         width="160"
         height="17"
         fill="0"
@@ -19167,8 +19588,8 @@
         justification="Left"
       >getNumber()</text>
       <text name="Fig11.6.2"
-        x="697"
-        y="1125"
+        x="1473"
+        y="1069"
         width="160"
         height="17"
         fill="0"
@@ -19183,24 +19604,8 @@
         justification="Left"
       >getStatus()</text>
       <text name="Fig11.6.3"
-        x="697"
-        y="1142"
-        width="160"
-        height="17"
-        fill="0"
-        fillcolor="white"
-        stroke="0"
-        strokecolor="black"
-        textcolor="black"
-        font="Dialog"
-        italic="false"
-        bold="false"
-        textsize="12"
-        justification="Left"
-      >getPromotionName()</text>
-      <text name="Fig11.6.4"
-        x="697"
-        y="1159"
+        x="1473"
+        y="1086"
         width="160"
         height="17"
         fill="0"
@@ -19214,9 +19619,9 @@
         textsize="12"
         justification="Left"
       >setNumber(newNumber)</text>
-      <text name="Fig11.6.5"
-        x="697"
-        y="1176"
+      <text name="Fig11.6.4"
+        x="1473"
+        y="1103"
         width="160"
         height="17"
         fill="0"
@@ -19230,9 +19635,9 @@
         textsize="12"
         justification="Left"
       >setStatus(newStatus)</text>
-      <text name="Fig11.6.6"
-        x="697"
-        y="1193"
+      <text name="Fig11.6.5"
+        x="1473"
+        y="1120"
         width="160"
         height="17"
         fill="0"
@@ -19246,9 +19651,9 @@
         textsize="12"
         justification="Left"
       >setPromotion(newPromoID)</text>
-      <text name="Fig11.6.7"
-        x="697"
-        y="1210"
+      <text name="Fig11.6.6"
+        x="1473"
+        y="1137"
         width="160"
         height="23"
         fill="0"
@@ -19262,6 +19667,723 @@
         textsize="12"
         justification="Left"
       >&lt;&lt;create&gt;&gt; Seat()</text>
+    </group>
+  </group>
+  <group name="Fig12"
+       description="org.argouml.uml.diagram.static_structure.ui.FigClass[680, 8, 344, 670]pathVisible=false;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
+       href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CFA"
+       fill="1"
+       fillcolor="white"
+       stroke="1"
+       strokecolor="black"
+  >
+    <private>
+    </private>
+    
+    <rectangle name="Fig12.0"
+      x="680"
+      y="8"
+      width="344"
+      height="670"
+      fill="1"
+      fillcolor="white"
+      stroke="1"
+      strokecolor="black"
+    />
+    <text name="Fig12.1"
+      x="681"
+      y="9"
+      width="342"
+      height="23"
+      fill="0"
+      fillcolor="white"
+      stroke="0"
+      strokecolor="black"
+      textcolor="black"
+      font="Dialog"
+      italic="false"
+      bold="false"
+      textsize="12"
+      justification="Center"
+    >OTS</text>
+    <group name="Fig12.2"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[681, 9, 352, 0]"
+         href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CFA"
+         fill="0"
+         fillcolor="white"
+         stroke="0"
+         strokecolor="black"
+         visibility="0"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig12.2.0"
+        x="681"
+        y="9"
+        width="352"
+        height="0"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+    </group>
+    <rectangle name="Fig12.3"
+      x="680"
+      y="32"
+      width="344"
+      height="1"
+      fill="1"
+      fillcolor="black"
+      stroke="1"
+      strokecolor="black"
+    />
+    <group name="Fig12.4"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[681, 33, 342, 93]"
+         href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CFA"
+         fill="0"
+         fillcolor="white"
+         stroke="0"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig12.4.0"
+        x="681"
+        y="33"
+        width="342"
+        height="93"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+      <text name="Fig12.4.1"
+        x="681"
+        y="33"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >static users : ArrayList&lt;User&gt;</text>
+      <text name="Fig12.4.2"
+        x="681"
+        y="50"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >events : ArrayList&lt;Event&gt;</text>
+      <text name="Fig12.4.3"
+        x="681"
+        y="67"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >promotions : ArrayList&lt;Event&gt;</text>
+      <text name="Fig12.4.4"
+        x="681"
+        y="84"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >currentUser : User</text>
+      <text name="Fig12.4.5"
+        x="681"
+        y="101"
+        width="342"
+        height="23"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >types : enum</text>
+    </group>
+    <rectangle name="Fig12.5"
+      x="680"
+      y="125"
+      width="344"
+      height="1"
+      fill="1"
+      fillcolor="black"
+      stroke="1"
+      strokecolor="black"
+    />
+    <group name="Fig12.6"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[681, 126, 342, 552]"
+         href="-64--88--112--102--300d72a:1603235de85:-8000:0000000000000CFA"
+         fill="0"
+         fillcolor="white"
+         stroke="0"
+         strokecolor="black"
+    >
+      <private>
+      </private>
+      
+      <rectangle name="Fig12.6.0"
+        x="681"
+        y="126"
+        width="342"
+        height="552"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+      />
+      <text name="Fig12.6.1"
+        x="681"
+        y="126"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >register()</text>
+      <text name="Fig12.6.2"
+        x="681"
+        y="143"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >login(email,password)</text>
+      <text name="Fig12.6.3"
+        x="681"
+        y="160"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >&lt;&lt;create&gt;&gt; OTS()</text>
+      <text name="Fig12.6.4"
+        x="681"
+        y="177"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >private populate()</text>
+      <text name="Fig12.6.5"
+        x="681"
+        y="194"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >viewShows()</text>
+      <text name="Fig12.6.6"
+        x="681"
+        y="211"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >viewEvents()</text>
+      <text name="Fig12.6.7"
+        x="681"
+        y="228"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >viewPromotions()</text>
+      <text name="Fig12.6.8"
+        x="681"
+        y="245"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >findShow(showName)</text>
+      <text name="Fig12.6.9"
+        x="681"
+        y="262"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >findEvent(eventName)</text>
+      <text name="Fig12.6.10"
+        x="681"
+        y="279"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >findPromotion(promotionName)</text>
+      <text name="Fig12.6.11"
+        x="681"
+        y="296"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >findAgent(agentName)</text>
+      <text name="Fig12.6.12"
+        x="681"
+        y="313"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >createCustomer()</text>
+      <text name="Fig12.6.13"
+        x="681"
+        y="330"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >modifyCustomer(customerName)</text>
+      <text name="Fig12.6.14"
+        x="681"
+        y="347"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >viewTickets()</text>
+      <text name="Fig12.6.15"
+        x="681"
+        y="364"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >viewTickets(showName)</text>
+      <text name="Fig12.6.16"
+        x="681"
+        y="381"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >viewTickets(startRange,endRange)</text>
+      <text name="Fig12.6.17"
+        x="681"
+        y="398"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >addEvent()</text>
+      <text name="Fig12.6.18"
+        x="681"
+        y="415"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >rescheduleEvent(eventName)</text>
+      <text name="Fig12.6.19"
+        x="681"
+        y="432"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >cancelShow(showName)</text>
+      <text name="Fig12.6.20"
+        x="681"
+        y="449"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >cancelEvent(eventName)</text>
+      <text name="Fig12.6.21"
+        x="681"
+        y="466"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >addShow()</text>
+      <text name="Fig12.6.22"
+        x="681"
+        y="483"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >rescheduleShow(showName)</text>
+      <text name="Fig12.6.23"
+        x="681"
+        y="500"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >changeMSPC(showName)</text>
+      <text name="Fig12.6.24"
+        x="681"
+        y="517"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >addPromotion()</text>
+      <text name="Fig12.6.25"
+        x="681"
+        y="534"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >assignPromotions(showName,seatNumbers,promotionName)</text>
+      <text name="Fig12.6.26"
+        x="681"
+        y="551"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >changePromotion(promotionName)</text>
+      <text name="Fig12.6.27"
+        x="681"
+        y="568"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >deletePromotion(promotionName)</text>
+      <text name="Fig12.6.28"
+        x="681"
+        y="585"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >addContract()</text>
+      <text name="Fig12.6.29"
+        x="681"
+        y="602"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >changeContract(agentName)</text>
+      <text name="Fig12.6.30"
+        x="681"
+        y="619"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >cancelContract(agentName)</text>
+      <text name="Fig12.6.31"
+        x="681"
+        y="636"
+        width="342"
+        height="17"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >renewContract(agentName)</text>
+      <text name="Fig12.6.32"
+        x="681"
+        y="653"
+        width="342"
+        height="23"
+        fill="0"
+        fillcolor="white"
+        stroke="0"
+        strokecolor="black"
+        textcolor="black"
+        font="Dialog"
+        italic="false"
+        bold="false"
+        textsize="12"
+        justification="Left"
+      >purchaseTickets()</text>
     </group>
   </group>
 </pgml>
