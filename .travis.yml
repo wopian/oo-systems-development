@@ -21,6 +21,7 @@ script:
 - cd report
 - xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape report.tex || true # Tables require regeneration
 - xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape report.tex
+- cd ..
 deploy:
   provider: pages
   skip_cleanup: true
