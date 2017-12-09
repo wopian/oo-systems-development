@@ -23,5 +23,9 @@
     "**/report/_minted-report": true,
     "**/.pdf/*.{aux,log,synctex,toc,out,pyg}": true,
     "**/.directory": true
-  }
+  },
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 100,
+  "editor.rulers": [ 100 ],
+  "editor.wrappingIndent": "same"
 }
