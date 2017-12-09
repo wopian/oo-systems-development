@@ -17,12 +17,13 @@ install: pip install Pygments
 script:
 - mkdir pdf
 - bin/appendix > report/appendix.tex
-- xelatex --synctex=2 --output-directory=pdf --interaction=nonstopmode -shell-escape report/report.tex
+- cd report
+- xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape report.tex
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  file: pdf/report.pdf
+  local_dir: pdf
   target_branch: report
   on:
     branch: master
