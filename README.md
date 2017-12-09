@@ -1,5 +1,7 @@
 # OOSD Coursework 1
 
+The report is updated on every commit and is viewable [here][report.pdf]
+
 #### Using Git
 
 ##### Getting The Repository Setup
@@ -42,3 +44,4 @@
 [Git]:https://git-scm.com/download/win
 [MiKTeX]:https://miktex.org/download
 [Visual Studio Code]:https://code.visualstudio.com/Download
+[report.pdf]:https://github.com/wopian/oo-systems-development/blob/report/report.pdf
