@@ -15,8 +15,8 @@ addons:
 install: pip install Pygments
 script:
 - mkdir pdf
-- bin/appendix > report/appendix.tex
-- xelatex -interaction=nonstopmode -halt-on-error -output-directory pdf report/report.tex
+- bin/appendix.pl > report/appendix.tex
+- xelatex --synctex=2 --output-directory=pdf --interaction=nonstopmode -shell-escape report/report.tex
 deploy:
   provider: pages
   skip_cleanup: true
