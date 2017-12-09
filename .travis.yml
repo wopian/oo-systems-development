@@ -13,11 +13,13 @@ addons:
     - texlive-latex-recommended
     - texlive-xetex
     - latex-xcolor
+    - lmodern
 install: pip install Pygments
 script:
 - mkdir pdf
 - bin/appendix > report/appendix.tex
 - cd report
+- xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape report.tex || true # Tables require regeneration
 - xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape report.tex
 deploy:
   provider: pages
