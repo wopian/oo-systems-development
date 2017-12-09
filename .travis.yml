@@ -12,6 +12,7 @@ addons:
     - dvipng
     - texlive-latex-recommended
     - texlive-xetex
+    - latex-xcolor
 install: pip install Pygments
 script:
 - mkdir pdf
