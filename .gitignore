@@ -1,6 +1,6 @@
 ~$*.doc*
 src/doc
-report/.pdf/*.*
+report/.pdf
 report/_minted-report
 !report/.pdf/*.pdf
 #Temporary Files
