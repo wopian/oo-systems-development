@@ -1,0 +1,17 @@
+language: python
+python: 3.6
+sudo: required
+before_install: sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+install: pip install Pygments
+script:
+- mkdir pdf
+- bin/appendix > report/appendix.tex
+- xelatex -interaction=nonstopmode -halt-on-error -output-directory pdf report/report.tex
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  file: pdf/report.pdf
+  target_branch: report
+  on:
+    branch: master
