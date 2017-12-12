@@ -15,7 +15,7 @@ public class Event
     private LocalDate endDate;
     private String eventName;
     private int eventID;
-    private int status;
+    private Statuses status;
 
     /**
      * Constructor for objects of class Event
@@ -51,5 +51,62 @@ public class Event
     public void getShows()
     {
       shows.Stream().forEach(show -> show.getDetails());
+    }
+  
+    /**
+    * Method that allows to change the name of an event
+    * @param newName The new name for the event
+    */
+    public void setName(String newName)
+    {
+      eventName = newName;
+    }
+  
+    /**
+    * Method that allows to change the start date of the event
+    * @param newDate The new start date for the event
+    */
+    public void setStartDate(LocalDate newDate)
+    {
+      startDate = newDate;
+    }
+  
+    /**
+    * Method that allows to change the end date of the event
+    * @
+    */
+    public void setEndDate(LocalDate newDate)
+    {
+      endDate = newDate;
+    }
+  
+    /**
+    * Method that allows to set a new status to the event
+    * @param newStatus The new status of the event
+    */
+    public void setStatus(Statuses newStatus)
+    {
+      status = newStatus;
+    }
+  
+    /**
+    * Method that allows to get the shows for a specific date
+    * @param showDate The date for which we are looking if the event has shows
+    */
+    public void getShows(LocalDateTime showDate)
+    {
+      shows.Stream().filter(show -> show.getStart().getYear() == showDate.getYear() && show.getStart().getDayOfYear() == showDate.getDayOfYear())
+        .forEach(show -> show.getDetails());
+    }
+  
+    /**
+    * Method that displays the details of all shows that are in a range
+    * @param startDate The date from which to start to look for shows (exclusive)
+    * @param endDate The date from which to end looking for shows (exclusive)
+    */
+    public void getShows(LocalDateTime startDate, LocalDateTime endDate)
+    {
+      shows.Stream().filter(show -> show.getStart().isAfter(startDate) && show.getEnd().isBefore(endDate))
+        .forEach(show -> show.getDetails());
     }
 }
