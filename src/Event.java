@@ -44,4 +44,12 @@ public class Event
     {
       shows.add(new show(start, end, MSPC, shows.size()));
     }
+    
+    /**
+    * Method that allows to retrieve all the details for the shows of an event
+    */
+    public void getShows()
+    {
+      shows.Stream().forEach(show -> show.getDetails());
+    }
 }
