@@ -30,7 +30,7 @@ public class Event
         startDate = start;
         endDate = end;
         eventID = (lastEventID + 1);
-        status = statuses.Confirmed;
+        status = Statuses.Confirmed;
     }
     
     /**
@@ -42,7 +42,7 @@ public class Event
     // TODO: figure out how to add the seats to the show
     public void addShow(LocalDateTime start, LocalDateTime end, int MSPC)
     {
-      shows.add(new show(start, end, MSPC, shows.size()));
+      TicketSystem.shows.add(new Show(start, end, MSPC, shows.size()));
     }
     
     /**
@@ -50,7 +50,7 @@ public class Event
     */
     public void getShows()
     {
-      shows.Stream().forEach(show -> show.getDetails());
+      shows.stream().forEach(show -> show.getDetails());
     }
   
     /**
@@ -95,7 +95,7 @@ public class Event
     */
     public void getShows(LocalDateTime showDate)
     {
-      shows.Stream().filter(show -> show.getStart().getYear() == showDate.getYear() && show.getStart().getDayOfYear() == showDate.getDayOfYear())
+      shows.stream().filter(show -> show.getStart().getYear() == showDate.getYear() && show.getStart().getDayOfYear() == showDate.getDayOfYear())
         .forEach(show -> show.getDetails());
     }
   
@@ -106,7 +106,7 @@ public class Event
     */
     public void getShows(LocalDateTime startDate, LocalDateTime endDate)
     {
-      shows.Stream().filter(show -> show.getStart().isAfter(startDate) && show.getEnd().isBefore(endDate))
+      shows.stream().filter(show -> show.getStart().isAfter(startDate) && show.getEnd().isBefore(endDate))
         .forEach(show -> show.getDetails());
     }
 }

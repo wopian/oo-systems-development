@@ -50,5 +50,30 @@ public class Customer extends User
         System.out.println(agentID);
     }
     
+    /**
+     * Method that allows to change the name of the customer
+     * @param newName The new name for the customer
+     */
+    public void setName(String newName)
+    {
+        super.name = newName;
+    }
     
+    /**
+     * Method that allows to change the address of the customer
+     * @param newAdd The new address for the customer
+     */
+    public void setAddress(String newAdd)
+    {
+        address = newAdd;
+    }
+    
+    /**
+     * Method that allows to change the email address of the customer
+     * @param newEmail The new email address of the customer
+     */
+    public void setEmail(String newEmail)
+    {
+        super.setEmail(newEmail);
+    }
 }

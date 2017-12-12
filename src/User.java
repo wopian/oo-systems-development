@@ -72,4 +72,13 @@ public class User
     public String getName(){
         return name;
     }
+    
+    /**
+     * Method that allows a user to change their email
+     * @param newEmail The new email of the user
+     */
+    public void setEmail(String newEmail)
+    {
+        email = newEmail;
+    }
 }

@@ -28,7 +28,7 @@ public class Manager extends User
      */
     public void addEvent(LocalDate startDate, LocalDate endDate, String name)
     {
-        TicketSystem.events.add(new Event(name, startDate, endDate));
+        TicketSystem.events.add(new Event(name, startDate, endDate, events.size()));
     }
     
     //TODO: implement the enum for event statuses and finish the implementation
@@ -40,7 +40,14 @@ public class Manager extends User
      */
     public void rescheduleEvent(Event event, LocalDate startDate, LocalDate endDate)
     {
-        event.rescheduleEvent(startDate, endDate);
+        if(startDate != null)
+        {
+            event.setStartDate(startDate);
+        }
+        if(endDate != null)
+        {
+            event.setEndDate(endDate);
+        }
     }
     
     //TODO: Implement the enum for event statuses and finish the implementation
@@ -49,7 +56,7 @@ public class Manager extends User
      * @param event The event that the manager is working on
      */
     public void cancelEvent(Event event){
-        event.cancel();
+        event.setStatus(Statuses.Cancelled);
     }
     
     /**
@@ -71,7 +78,14 @@ public class Manager extends User
      */
     public void rescheduleShow(Show show, LocalDateTime newStart, LocalDateTime newEnd)
     {
-        show.reschedule(newStart, newEnd);
+        if(newStart != null)
+        {
+            show.setStart(newStart);
+        }
+        if(newEnd != null)
+        {
+            show.setEnd(newEnd);
+        }
     }
     
     /**
@@ -80,7 +94,7 @@ public class Manager extends User
      */
     public void cancelShow(Show show)
     {
-        show.cancel();
+        show.setStatus(Statuses.Cancelled);
     }
     
     /**
@@ -107,7 +121,7 @@ public class Manager extends User
      */
     public void assignPromotions(int[] seats, int promotionID)
     {
-        for(int i = 0; i < seats.Length; i++)
+        for(int i = 0; i < seats.length; i++)
         {
             TicketSystem.seats.stream().filter(seat -> seat.getID() == seats[i])
                 .forEach(seat -> seat.setPromotion(promotionID));

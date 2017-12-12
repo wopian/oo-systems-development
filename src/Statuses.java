@@ -11,5 +11,7 @@ public enum Statuses
     LoggedIn,
     Unheld,
     Held,
-    Reserved
+    Reserved,
+    Confirmed,
+    Cancelled
 }

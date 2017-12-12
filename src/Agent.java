@@ -103,11 +103,19 @@ public class Agent extends User
         if (index != -1)
         {
             Customer customer = TicketSystem.users.get(index);
-            customer.modifyCustomer(newName, newAdd, newEmail);
             
             if(newName != null){
+                customer.setName(newName);
                 customersManaged.remove(custName);
                 customersManaged.put(newName, index);
+            }
+            if(newAdd != null)
+            {
+                customer.setAddress(newAdd);
+            }
+            if(newEmail != null)
+            {
+                customer.setEmail(newEmail);
             }
         }
     }

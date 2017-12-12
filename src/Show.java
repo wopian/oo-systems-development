@@ -31,7 +31,70 @@ class Show
     start = newStart;
     end = newEnd;
     showID = (lastShowID + 1);
-    status = Statuses.confirmed;
+    status = Statuses.Confirmed;
     MaxSeatsPerCustomer = MSPC;
+    seats = new ArrayList<>();
+  }
+  
+  /**
+   * Method that allows to set a new start date and time to a show
+   * @param newStart The new start date and time for the show
+   */
+  public void setStart(LocalDateTime newStart)
+  {
+      start = newStart;
+  }
+  
+  /**
+   * Method that allows to set a new end date and time to a show
+   * @param newEnd The new end date and time for the show
+   */
+  public void setEnd(LocalDateTime newEnd)
+  {
+      end = newEnd;
+  }
+  
+  /**
+   * Method that allows to set a new status to the show
+   * @param newStatus The new status for the show
+   */
+  public void setStatus(Statuses newStatus)
+  {
+      status = newStatus;
+  }
+  
+  /**
+   * Method that allows to assign a new MSPC for the show
+   * @param newMSPC The new max seats per customer value for the show
+   */
+  public void setMSPC(int newMSPC)
+  {
+      MaxSeatsPerCustomer = newMSPC;
+  }
+  
+  /**
+   * Method that allows other classes to retrieve the value of the start date
+   * @return The start date and time for the show
+   */
+  public LocalDateTime getStart()
+  {
+      return start;
+  }
+  
+  /**
+   * Method that allows other classes to retrieve the end date and time of the show
+   * @return The end date and time for the show
+   */
+  public LocalDateTime getEnd()
+  {
+      return end;
+  }
+  
+  /**
+   * Method that allows to print the details of the show.
+   * Prints all the details for the show in the console
+   */
+  public void getDetails()
+  {
   }
 }
