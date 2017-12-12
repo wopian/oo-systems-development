@@ -8,10 +8,10 @@
 public class User
 {
     // instance variables - store the basic details of the user, including login info
-    private int userID;
+    public int userID;
     private String password;
     protected String name;
-    private String email;
+    protected String email;
     private Statuses status;
 
     /**
@@ -19,6 +19,7 @@ public class User
      * @param lastUserID The id of the last user to create the new ID
      * @param newName The name of the new user
      * @param newPwd The password for the new user
+     * @param newEmail The email of the new user
      */
     public User(int lastUserID, String newName, String newPwd, String newEmail)
     {
@@ -27,7 +28,17 @@ public class User
         name = newName;
         email = newEmail;
     }
-
+    
+    /**
+     * A method to allow the user to change their password
+     * @param newPwd The new password for the user
+     */
+    public void changePassword(String newPwd)
+    {
+        if(newPwd != null){
+            password = newPwd;
+        }
+    }
     /**
      * A method to allow the user to do their login
      * @param logPwd The password entered for the login

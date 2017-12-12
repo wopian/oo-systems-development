@@ -17,7 +17,7 @@ public class Agent extends User
     private float commission;
     private LocalDate startDate;
     private LocalDate endDate;
-    private HashMap<String, Integer> customers;
+    private HashMap<String, Integer> customersManaged;
     private ArrayList<Ticket> ticketsSold;
     
 
@@ -37,7 +37,7 @@ public class Agent extends User
         commission = newCom;
         startDate = newDate;
         endDate = startDate.plusDays(dayDuration);
-        customers = new HashMap<String,Integer>();
+        customersManaged = new HashMap<String,Integer>();
         ticketsSold = new ArrayList<Ticket>();
     }
     
@@ -49,9 +49,9 @@ public class Agent extends User
      * @param newPwd The password for the new user
      * @param newEmail The email of the new user
      */
-    public void createCustomer(int lastUserID, String newName, String newPwd, String newEmail){
-        TicketSystem.users.add(new User(lastUserID, newName, newPwd, newEmail));
-        customers.put(newName, (lastUserID + 1));
+    public void createCustomer(int lastUserID, String newName, String newPwd, String newEmail, String newAdd){
+        TicketSystem.users.add(new Customer(lastUserID, newName, newPwd, newEmail, newAdd, super.userID));
+        customersManaged.put(newName, (lastUserID + 1));
     }
     
     /**
@@ -80,5 +80,39 @@ public class Agent extends User
         endRange.format(ISO_LOCAL_DATE));
     }
     
+    /**
+     * Method allowing the agent to see the details of a customer
+     * @param custName The name of the customer
+     */
+    public void viewCustomer(String custName){
+        int index = customersManaged.get(custName);
+        Customer customer = TicketSystem.users.get(index);
+        customer.viewDetails();
+    }
     
+    /**
+     * Method allowing the agent to modify certain aspects of the customer's data
+     * @param custName The name of the customer to look up
+     * @param newName The new name of the customer, can be null
+     * @param newAdd The new address of the customer, can be null
+     * @param newEmail The new email of the customer, can be null
+     */
+    public void modifyCustomer(String custName, String newName, String newAdd, String newEmail)
+    {
+        int index = customersManaged.getOrDefault(custName, -1);
+        if (index != -1)
+        {
+            Customer customer = TicketSystem.users.get(index);
+            customer.modifyCustomer(newName, newAdd, newEmail);
+            
+            if(newName != null){
+                customersManaged.remove(custName);
+                customersManaged.put(newName, index);
+            }
+        }
+    }
+    
+    public void renewFor(long days){
+        endDate = endDate.plusDays(days);
+    }
 }
