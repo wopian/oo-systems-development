@@ -3,6 +3,9 @@ import java.time.LocalDateTime;
 
 /**
 * Class that contains all the data and methods for the a show
+* TODO: Find a way to display the seats that aren't booked yet efficiently
+* Display the prices for the different seats efficiently (aka show the range of seat with
+* its price in a single Console line)
 * 
 * @author Alex Costa
 * @version 1.00
@@ -96,5 +99,40 @@ class Show
    */
   public void getDetails()
   {
+      System.out.println("Start Date and Time: " + start.toString());
+      System.out.println("End Date and Time: " + end.toString());
+      System.out.println("Maximum Seats that a customer can buy: " + MaxSeatsPerCustomer);
+      System.out.println("Status of the show: " + status.toString());
+      System.out.println();
+  }
+  
+  /**
+   * Method that allows to hold a seat for a show
+   * @param seatNumber The number of the seat
+   */
+  public void holdSeat(int seatNumber)
+  {
+      Seat seat = seats.get(seatNumber);
+      seat.setStatus(Statuses.Held);
+  }
+  
+  /**
+   * Method that allows to unhold a seat for a show
+   * @param seatNumber The number of the seat
+   */
+  public void unholdSeat(int seatNumber)
+  {
+      Seat seat = seats.get(seatNumber);
+      seat.setStatus(Statuses.Unheld);
+  }
+  
+  /**
+   * Method that allows to reserve a seat for a show
+   * @param seatNumber The number of the seat
+   */
+  public void reserveSeat(int seatNumber)
+  {
+      Seat seat = seats.get(seatNumber);
+      seat.setStatus(Statuses.Reserved);
   }
 }
