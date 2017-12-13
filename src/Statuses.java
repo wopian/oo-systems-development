@@ -13,5 +13,7 @@ public enum Statuses
     Held,
     Reserved,
     Confirmed,
-    Cancelled
+    Cancelled,
+    Tickets,
+    Spend
 }
