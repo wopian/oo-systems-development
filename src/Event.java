@@ -42,7 +42,7 @@ public class Event
     // TODO: figure out how to add the seats to the show
     public void addShow(LocalDateTime start, LocalDateTime end, int MSPC)
     {
-      TicketSystem.shows.add(new Show(start, end, MSPC, shows.size()));
+        shows.add(new Show(start, end, MSPC, shows.size()));
     }
     
     /**
@@ -60,6 +60,15 @@ public class Event
     public void setName(String newName)
     {
       eventName = newName;
+    }
+    
+    /**
+     * Method that allows other classes to get the name of the event
+     * @return The name of the event
+     */
+    public String getName()
+    {
+        return eventName;
     }
   
     /**
@@ -108,5 +117,15 @@ public class Event
     {
       shows.stream().filter(show -> show.getStart().isAfter(startDate) && show.getEnd().isBefore(endDate))
         .forEach(show -> show.getDetails());
+    }
+    
+    /**
+     * Method that allows other classes to get a Show object from this class
+     * @param showID The ID of the show to retrieve from the ArrayList
+     * @return A reference to an existing show object
+     */
+    public Show getShow(int showID)
+    {
+        return shows.get(showID);
     }
 }
