@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 /**
- * Write a description of class TicketSystem here.
+ * Class containing all the information and behaviour for the TicketSystem
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Alex Costa
+ * @version 1.00
  */
 public class TicketSystem
 {
@@ -12,22 +12,68 @@ public class TicketSystem
     public static ArrayList<Promotion> promotions = new ArrayList<>();
     public static ArrayList<Discount> discounts = new ArrayList<>();
     public static ArrayList<User> users = new ArrayList<>();
+    private int lastPromoID;
+    private int lastUserID;
+    private int lastEventID;
+    private int lastDiscountID;
 
     /**
      * Constructor for objects of class TicketSystem
      */
     public TicketSystem()
     {
-        
+      lastPromoID = promotions.size() - 1;
+      lastUserID = users.size() - 1;
+      lastEventID = events.size() - 1;
+      lastDiscountID = discounts.size() - 1;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public void sampleMethod()
+    * Method that allows other methods to retrieve an Event from
+    * the events ArrayList based on its name
+    * @param eventName The name of the event that we are looking for
+    * @return The event object. If no event corresponds to eventName,
+    * null will be sent out as an answer
+    */
+    public Event findEvent(String eventName)
     {
+      int index = -1;
+      for(Event event : events)
+      {
+        if(event.getName().equals(eventName))
+        {
+          index = event.getID();
+        }
+      }
+
+      if(index == -1)
+      {
+        return null;
+      }
+      else
+      {
+        return events.get(index);
+      }
+    }
+
+    public Promotion findPromotion(String promoName)
+    {
+      int index = -1;
+      for(Promotion promo : promotions)
+      {
+        if(promo.getName().equals(promoName))
+        {
+          index = promo.getID;
+        }
+      }
+
+      if(index == -1)
+      {
+        return null;
+      }
+      else
+      {
+        return promotions.get(index);
+      }
     }
 }
