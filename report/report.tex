@@ -7,12 +7,7 @@
 \usepackage{subfiles}
 \usepackage{enumitem}
 % Code
-\def\istravis{debian}
-\ifx\istravis\unknownplatform
-  \usepackage{minted}
-\else
-  \usepackage[cache=false,outputdir=.pdf]{minted}
-\fi
+\usepackage[cache=false,outputdir=.pdf]{minted}
 \usepackage{xcolor}
 \usemintedstyle{borland}
 \newmintedfile[java]{java}{
@@ -103,6 +98,8 @@
 
     \maketitle
     \tableofcontents
+
+    \platformname
 
     \part{Design}
     \subfile{design/useCase/}
