@@ -19,7 +19,7 @@ public class Manager extends User
     {
         super(lastUserID, newName, newPwd, newEmail);
     }
-    
+
     /**
      * Method that allows the user to create a new event in the system
      * @param startDate The start date of the event
@@ -30,7 +30,7 @@ public class Manager extends User
     {
         TicketSystem.events.add(new Event(name, startDate, endDate, TicketSystem.events.size()));
     }
-    
+
     //TODO: implement the enum for event statuses and finish the implementation
     /**
      * Allows the manager to reschedule an event in the system
@@ -49,7 +49,7 @@ public class Manager extends User
             event.setEndDate(endDate);
         }
     }
-    
+
     //TODO: Implement the enum for event statuses and finish the implementation
     /**
      * A method that allows the manager to cancel an event in the system
@@ -58,7 +58,7 @@ public class Manager extends User
     public void cancelEvent(Event event){
         event.setStatus(Statuses.Cancelled);
     }
-    
+
     /**
      * A method that allows the manager to add a show to an event in the system
      * @param event The event for which the manager is adding a show
@@ -69,7 +69,7 @@ public class Manager extends User
     public void addShow(Event event, LocalDateTime start, LocalDateTime end, int MSPC){
         event.addShow(start, end, MSPC);
     }
-    
+
     /**
      * A method that allows the manager to reschedule a show from the system
      * @param show The show that the manager is working on
@@ -87,7 +87,7 @@ public class Manager extends User
             show.setEnd(newEnd);
         }
     }
-    
+
     /**
      * A method that allows the manager to cancel a show on the system
      * @param show The show that the user is working on
@@ -96,7 +96,7 @@ public class Manager extends User
     {
         show.setStatus(Statuses.Cancelled);
     }
-    
+
     /**
      * A method that allows the manager to change the MSPC of a show
      * @param show The show that the user is working on
@@ -106,13 +106,13 @@ public class Manager extends User
     {
         show.setMSPC(newMSPC);
     }
-    
+
     //TODO: implement the Promotion constructor and write the method
     /**
      * A method that allows the manager to create a new Promotion on the system
      */
     public void addPromotion(){}
-    
+
     /**
      * A method that allows the manager to assign a certain promotion to a range of seats
      * @param seats An array of integers containing the IDs of the seats to which the promotion
@@ -121,7 +121,7 @@ public class Manager extends User
      */
     //TODO: refactor the assignPromotion method to allow the assignement of the promotion per
     //show
-    
+
     //TODO: Implement the Promotion class to know what can be changes
     // and then implement the method please!
     /**
@@ -129,20 +129,16 @@ public class Manager extends User
      * @param promotion The promotion that the manager wants to change
      */
     public void modifyPromotion(Promotion promotion){}
-    
+
     /**
      * A method that allows the manager to remove a promotion from the system.
      * @param promoName The name of the promotion that the manager wants to delete
      */
-    public void deletePromotion(String promoName)
+    public void deletePromotion(Promotion toDelete)
     {
-        int index;
-        TicketSystem.promotions.stream().filter(promo -> promo.getName().equals(promoName))
-        .forEach(promo -> index = promo.getID());
-        
-        TicketSystem.promotions.remove(index);
+        TicketSystem.promotions.remove(toDelete.getID());
     }
-    
+
     /**
      * Method that allows the manager to add a agent to the system
      * @param lastUserID The last ID assigned to generate the one for the new user
@@ -158,7 +154,7 @@ public class Manager extends User
             new Agent(lastUserID, newName, newPwd, newEmail, newCom, newDate, dayDuration)
             );
     }
-    
+
     //TODO: Figure an easy way that doesn't require 1000 lines of code to
     //change only certain infos if we're not going to change all of them
     // Also, stop being lazy and think a little bit
@@ -167,7 +163,7 @@ public class Manager extends User
      * @param agent The agent which details need to be changed
      */
     public void changeContract(Agent agent){}
-    
+
     /**
      * Method that allows the manager to cancel a contract with an agent
      * and delete their access to the platform instantaniously.
@@ -180,9 +176,9 @@ public class Manager extends User
         .forEach(user -> index = user.getID());
         TicketSystem.users.remove(index);
     }
-    
+
     /**
-     * Method that allows the manager to renew the contract of one agent by 
+     * Method that allows the manager to renew the contract of one agent by
      * a certain amount of days
      * @param agent The agent to whom the manager is renewing the contract
      * @param days The number of days the contract is to be renewed for
