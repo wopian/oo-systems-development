@@ -7,7 +7,8 @@
 \usepackage{subfiles}
 \usepackage{enumitem}
 % Code
-\usepackage[cache=false,outputdir=.pdf]{minted}
+\usepackage{minted}
+%\usepackage[cache=false,outputdir=.pdf]{minted}
 \usepackage{xcolor}
 \usemintedstyle{borland}
 \newmintedfile[java]{java}{
@@ -98,6 +99,8 @@
 
     \maketitle
     \tableofcontents
+
+    \platformname
 
     \part{Design}
     \subfile{design/useCase/}
