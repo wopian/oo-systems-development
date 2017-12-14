@@ -15,8 +15,8 @@ cache:
 #    - latex-xcolor
 #    - lmodern
 before_install:
-- sudo apt-get -qq update
-- sudo apt-get install -y texlive-latex-extra dvipng texlive-latex-recommended texlive-xetex latex-xcolor lmodern
+- wget https://github.com/scottkosty/install-tl-ubuntu/raw/master/install-tl-ubuntu
+- chmod +x ./install-tl-ubuntu
 install: pip install Pygments
 script:
 - mkdir pdf
