@@ -7,7 +7,12 @@
 \usepackage{subfiles}
 \usepackage{enumitem}
 % Code
-\usepackage[cache=false,outputdir=.pdf]{minted}
+\def\istravis{debian}
+\ifx\istravis\unknownplatform
+  \usepackage{minted}
+\else
+  \usepackage[cache=false,outputdir=.pdf]{minted}
+\fi
 \usepackage{xcolor}
 \usemintedstyle{borland}
 \newmintedfile[java]{java}{
