@@ -4,30 +4,107 @@
 
 \section{Event}
 \keepXColumns
-\begin{tabularx}{\textwidth}{l l l X l}
-  \textbf{Attribute}&\textbf{Type}&\textbf{Nullable}&\textbf{Description}&\textbf{Example}\\
+\begin{tabularx}{\linewidth}{l l l X l}
+  \textbf{Attribute}&\textbf{Type}&\textbf{Description}&\textbf{Example}\\
   \endhead
-  id        & Integer   & No  & Unique ID of the Event  & 1\\
-  name      & String    & No  & Name of the Event       & The Wizard of Oz\\
-  startDate & LocalDate & Yes & Date the Event starts   & 2017-04-09\\
-  endDate   & LocalDate & Yes & Date the Event ends     & 2017-04-11\\
+  eventName & String          & Name of the Event                             & The Wizard of Oz\\
+  startDate & LocalDate       & Date the Event starts                         & 2017-04-09\\
+  endDate   & LocalDate       & Date the Event ends                           & 2017-04-11\\
+  status    & Status          & Status of the event (e.g available/sold out)  & AVAILABLE \\
+  shows     & ArrayList<Show> & Shows part of the event                       &
 \end{tabularx}
 
 \section{Show}
 \keepXColumns
-\begin{tabularx}{\textwidth}{l l l X l}
-  \textbf{Attribute}&\textbf{Type}&\textbf{Nullable}&\textbf{Description}&\textbf{Example}\\
+\begin{tabularx}{\linewidth}{l l l X l}
+  \textbf{Attribute}&\textbf{Type}&\textbf{Description}&\textbf{Example}\\
   \endhead
-  id        & Integer       & No  & Unique ID of the Show           & 1\\
-  name      & String        & No  & Name of the Show                & The Wizard of Oz (Thu)\\
-  startDate & LocalDateTime & Yes & Date the Show starts            & 2017-04-09T19:30:00\\
-  duration  & Integer       & Yes & Duration of the show in minutes & 125\\
+  showName  & String            & Name of the Show                            & The Wizard of Oz (Thu)\\
+  startTime & LocalDateTime     & Date the Show starts                        & 2017-04-09T19:30:00\\
+  duration  & Integer           & Duration of the show in minutes             & 125\\
+  event     & Event             & Event the Show is part of                   &\\
+  seats     & ArrayList<Seat>   & Seats assigned to the show                  &\\
+  maxSeatsPerCustomer & Integer & Number of seats a customer can buy at once  & 6\\
+  status    & Status            & Status of show, e.g available/sold out      & CANCELLED
 \end{tabularx}
+
+\section{Seat}
+\keepXColumns
+\begin{tabularx}{\linewidth}{l l l X l}
+  \textbf{Attribute}&\textbf{Type}&\textbf{Description}&\textbf{Example}\\
+  \endhead
+  seatNumber  & Integer   & Unique seat number for the show               & 29\\
+  status      & Status    & Status of the seat, e.g available/booked/held & HELD\\
+  promotion   & Promotion & Promotion assigned to the seat by the manager &
+\end{tabularx}
+
 
 \section{Ticket}
 \keepXColumns
-\begin{tabularx}{\textwidth}{l l l X l}
-  \textbf{Attribute}&\textbf{Type}&\textbf{Nullable}&\textbf{Description}&\textbf{Example}\\
+\begin{tabularx}{\linewidth}{l l l X l}
+  \textbf{Attribute}&\textbf{Type}&\textbf{Description}&\textbf{Example}\\
   \endhead
-  id & Integer & No & Unique ID of the Ticket & 1\\
+  ticketID  & Integer         & Unique ID of the Ticket             & 1\\
+  event     & Event           & Event the ticket was purchased for  &\\
+  show      & Show            & Show the ticket was purchased for   &\\
+  seats     & ArrayList<Seat> & Seats purchased                     &\\
+\end{tabularx}
+
+\section{Promotion}
+\keepXColumns
+\begin{tabularx}{\linewidth}{l l l X l}
+  \textbf{Attribute}&\textbf{Type}&\textbf{Description}&\textbf{Example}\\
+  \endhead
+  name      & String              & Name of the promotion                 & Weekend Special\\
+  startDate & LocalDate           & Date the promotion is valid from      & 2017-12-23\\
+  endDate   & LocalDate           & Date the promotion is valid until     & 2017-12-24\\
+  weekDay   & WeekDay             & Day the week the promotion is valid   & TUE\\
+  startTime & Time                & Time the promotion is valid from      & 15:00:00\\
+  endTime   & Time                & Time the promotion is valid until     & 18:00:00\\
+  price     & BigDecimal          & Price of the ticket                   & 4.30\\
+  discounts & ArrayList<Discount> & Discounts associated to the promotion &
+\end{tabularx}
+
+\section{Discount}
+\keepXColumns
+\begin{tabularx}{\linewidth}{l l l X l}
+  \textbf{Attribute}&\textbf{Type}&\textbf{Description}&\textbf{Example}\\
+  \endhead
+  discountName    & String      & Name of the discount                & 25\% off 2 or more tickets\\
+  minTickets      & Integer     & Minimum number of tickets required  & 2\\
+  minSpent        & BigDecimal  & Minimum total cost required         & 22.50\\
+  discountPercent & Double      & Percent off of the cost             & 25
+\end{tabularx}
+
+\section{User}
+\keepXColumns
+\begin{tabularx}{\linewidth}{l l l X l}
+  \textbf{Attribute}&\textbf{Type}&\textbf{Description}&\textbf{Example}\\
+  \endhead
+  userID    & Integer & Unique ID of each user in the system  & 1\\
+  password  & String  & Password for the user to login        & hunter2\\
+  name      & String  & First and last name of the user       & John Doe\\
+  email     & String  & Email for the user to login           & john.doe@gmail.com
+\end{tabularx}
+
+\section{Customer}
+\keepXColumns
+\begin{tabularx}{\linewidth}{l l l X l}
+  \textbf{Attribute}&\textbf{Type}&\textbf{Description}&\textbf{Example}\\
+  \endhead
+  address & String            & Address to post tickets to          &  60 Brook St, High Wycombe, HP11 2EQ \\
+  tickets & ArrayList<Ticket> & Tickets the customer has purchased  &
+\end{tabularx}
+
+\section{Agent}
+\keepXColumns
+\begin{tabularx}{\linewidth}{l l l X l}
+  \textbf{Attribute}&\textbf{Type}&\textbf{Description}&\textbf{Example}\\
+  \endhead
+  commission  & Float               &&\\
+  startDate   & LocalDateTime       & Start of the agent's contract   & 2017-01-28T09:00:00\\
+  endDate     & LocalDateTime       & End of the agent's contract     & 2017-09-28T17:00:00\\
+  customers   & ArrayList<Customer> & Customers managed by the agent  &\\
+  ticketsSold & ArrayList<Ticket>   & Tickets sold by the agent       &\\
+  seats       & ArrayList<Seat>     & Seats managed by the agent      &
 \end{tabularx}
