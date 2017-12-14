@@ -1,8 +1,7 @@
-language: python
+language: r
 python: 2.7
-sudo: required
+sudo: false
 cache:
-  apt: true
   directories:
     - $HOME/.cache/pip
 #addons:
@@ -14,10 +13,10 @@ cache:
 #    - texlive-xetex
 #    - latex-xcolor
 #    - lmodern
-before_install:
-- sudo add-apt-repository universe
-- sudo apt-get update
-- sudo apt-get install texlive-latex-extra dvipng texlive-latex-recommended texlive-xetex latex-xcolor lmodern
+#before_install:
+#- sudo add-apt-repository universe
+#- sudo apt-get update
+#- sudo apt-get install texlive-latex-extra dvipng texlive-latex-recommended texlive-xetex latex-xcolor lmodern
 install: pip install Pygments
 script:
 - mkdir pdf
