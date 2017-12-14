@@ -232,4 +232,22 @@ public class Promotion
         
         discount = thisDiscount.getDiscount();
     }
+    
+    /**
+     * Method that allows other classes to get the name of the promotion
+     * @return The name of the promotion in the String format
+     */
+    public String getName()
+    {
+        return name;
+    }
+    
+    /**
+     * Method that allows other classes to retrieve the ID of the promotion
+     * @return The ID of the promotion in the integer type
+     */
+    public int getID()
+    {
+        return promotionID;
+    }
 }

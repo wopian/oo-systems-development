@@ -81,4 +81,13 @@ public class User
     {
         email = newEmail;
     }
+    
+    /**
+     * Method that allows other classes to get the ID of the user
+     * @return The ID of the user in the int type
+     */
+    public int getID()
+    {
+        return userID;
+    }
 }

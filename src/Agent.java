@@ -59,10 +59,10 @@ public class Agent extends User
      * @param eventName The name of the event that the agent is looking for
      */
     public void viewTickets(String eventName){
-        ticketsSold.Stream().filter(ticket -> ticket.getEventName().equals(eventName))
-        .forEach(ticket -> ticket.printDetails());
+        ticketsSold.stream().filter(ticket -> ticket.getEventName().equals(eventName))
+        .forEach(ticket -> ticket.printTicket());
         System.out.println("Total: " +
-        ticketsSold.Stream().filter(ticket -> ticket.getEventName().equals(eventName))
+        ticketsSold.stream().filter(ticket -> ticket.getEventName().equals(eventName))
         .count() + " tickets");
     }
     
@@ -73,11 +73,10 @@ public class Agent extends User
      */
     public void viewTickets(LocalDate startRange, LocalDate endRange){
         ticketsSold.stream().filter(ticket -> ticket.getDate().isAfter(startRange) && ticket.getDate().isBefore(endRange))
-        .forEach(ticket -> ticket.printDetails());
+        .forEach(ticket -> ticket.printTicket());
         System.out.println("Total " +
         ticketsSold.stream().filter(ticket -> ticket.getDate().isAfter(startRange) && ticket.getDate().isBefore(endRange))
-        .count() + " tickets between " + startRange.format(ISO_LOCAL_DATE) + " and " +
-        endRange.format(ISO_LOCAL_DATE));
+        .count() + " tickets");
     }
     
     /**
@@ -86,7 +85,7 @@ public class Agent extends User
      */
     public void viewCustomer(String custName){
         int index = customersManaged.get(custName);
-        Customer customer = TicketSystem.users.get(index);
+        Customer customer = (Customer) TicketSystem.users.get(index);
         customer.viewDetails();
     }
     
@@ -102,7 +101,7 @@ public class Agent extends User
         int index = customersManaged.getOrDefault(custName, -1);
         if (index != -1)
         {
-            Customer customer = TicketSystem.users.get(index);
+            Customer customer = (Customer) TicketSystem.users.get(index);
             
             if(newName != null){
                 customer.setName(newName);

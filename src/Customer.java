@@ -39,7 +39,7 @@ public class Customer extends User
     
     public void viewTickets()
     {
-        tickets.forEach(ticket -> ticket.getDetails());
+        tickets.forEach(ticket -> ticket.printTicket());
     }
     
     public void viewDetails()

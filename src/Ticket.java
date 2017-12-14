@@ -1,4 +1,6 @@
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.LocalDate;
 /**
  * Write a description of class Ticket here.
  *
@@ -33,12 +35,30 @@ public class Ticket
         price = money;
         customerName = customer;
     }
-
+    
+    /**
+     * Method that allows to print the details of the ticket
+     */
     public void printTicket()
     {
         System.out.println("Event: " + TicketSystem.events.get(eventID).getName());
         System.out.println("Start: " + TicketSystem.events.get(eventID).getShow(showID).getStart().toString());
         System.out.println("End: " + TicketSystem.events.get(eventID).getShow(showID).getEnd().toString());
         System.out.println("Seat: " + seatNumber);
+        System.out.println("Price: " + price.toString());
+    }
+    
+    /**
+     * Method that allows other classes to get the name of the event this ticket belongs to
+     * @return The name of the event that this ticket is for
+     */
+    public String getEventName()
+    {
+        return TicketSystem.events.get(eventID).getName();
+    }
+    
+    public LocalDate getDate()
+    {
+        return TicketSystem.events.get(eventID).getShow(showID).getStart().toLocalDate();
     }
 }

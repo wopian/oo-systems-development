@@ -28,7 +28,7 @@ public class Manager extends User
      */
     public void addEvent(LocalDate startDate, LocalDate endDate, String name)
     {
-        TicketSystem.events.add(new Event(name, startDate, endDate, events.size()));
+        TicketSystem.events.add(new Event(name, startDate, endDate, TicketSystem.events.size()));
     }
     
     //TODO: implement the enum for event statuses and finish the implementation
@@ -119,14 +119,8 @@ public class Manager extends User
      * is being assigned
      * @param promotionID
      */
-    public void assignPromotions(int[] seats, int promotionID)
-    {
-        for(int i = 0; i < seats.length; i++)
-        {
-            TicketSystem.seats.stream().filter(seat -> seat.getID() == seats[i])
-                .forEach(seat -> seat.setPromotion(promotionID));
-        }
-    }
+    //TODO: refactor the assignPromotion method to allow the assignement of the promotion per
+    //show
     
     //TODO: Implement the Promotion class to know what can be changes
     // and then implement the method please!
@@ -142,8 +136,9 @@ public class Manager extends User
      */
     public void deletePromotion(String promoName)
     {
-        int index = TicketSystem.promotions.stream().filter(promo -> promo.getName().equals(promoName))
-        .forEach(promo -> promo.getID());
+        int index;
+        TicketSystem.promotions.stream().filter(promo -> promo.getName().equals(promoName))
+        .forEach(promo -> index = promo.getID());
         
         TicketSystem.promotions.remove(index);
     }
@@ -180,8 +175,9 @@ public class Manager extends User
      */
     public void cancelContract(String agentName)
     {
-        int index = TicketSystem.users.stream().filter(user -> user.getName().equals(agentName))
-        .forEach(user -> user.getID());
+        int index;
+        TicketSystem.users.stream().filter(user -> user.getName().equals(agentName))
+        .forEach(user -> index = user.getID());
         TicketSystem.users.remove(index);
     }
     
