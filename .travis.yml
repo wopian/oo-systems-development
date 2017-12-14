@@ -1,6 +1,6 @@
 language: python
 python: 2.7
-sudo: required
+sudo: false
 cache:
   apt: true
   directories:
@@ -8,21 +8,19 @@ cache:
 addons:
   apt:
     packages:
-#    - texlive-latex-extra
-#    - dvipng
-#    - texlive-latex-recommended
+    - texlive-latex-extra
+    - dvipng
+    - texlive-latex-recommended
     - texlive-xetex
-#    - latex-xcolor
-#    - lmodern
-before_install:
-- wget https://github.com/scottkosty/install-tl-ubuntu/raw/master/install-tl-ubuntu && chmod +x ./install-tl-ubuntu
+    - latex-xcolor
+    - lmodern
 install: pip install Pygments
 script:
 - mkdir pdf
 - bin/appendix > report/appendix.tex
 - cd report
-- xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape report.tex || true # Tables require regeneration
-- xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape report.tex
+- xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape -8bit report.tex || true # Tables require regeneration
+- xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape -8bit report.tex
 - cd ..
 deploy:
   provider: pages
