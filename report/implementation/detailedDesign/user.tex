@@ -1,0 +1,35 @@
+\section{User}
+
+\subsection{changePassword}
+\begin{pc}
+OBTAIN new password from the user
+OBTAIN current password from the user
+
+IF the current password matches the existing password THEN
+	IF the new password is not null THEN
+		SET password to the new password
+	END IF
+END IF
+\end{pc}
+
+\subsection{login}
+\begin{pc}
+OBTAIN email from the user
+OBTAIN password from the user
+
+IF status is loggedOut THEN
+	IF password matches stored password THEN
+		SET status to loggedIn
+		DISPLAY greeting message
+	ELSE
+		DISPLAY wrong password message
+	END IF
+ELSE
+	DISPLAY user is already logged in message
+\end{pc}
+
+\subsection{logout}
+\begin{pc}
+SET status to loggedOut
+DISPLAY logged out message
+\end{pc}
