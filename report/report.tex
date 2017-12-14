@@ -7,7 +7,7 @@
 \usepackage{subfiles}
 \usepackage{enumitem}
 % Code
-\usepackage{minted}
+\usepackage[cache=false,outputdir=.pdf]{minted}
 \usepackage{xcolor}
 \usemintedstyle{borland}
 \newmintedfile[java]{java}{
@@ -15,6 +15,13 @@
   numberblanklines=false,
   numbersep=.2cm,
   tabsize=4,
+  fontsize=\normalsize
+}
+\newminted[pc]{text}{
+  linenos=true,
+  numberblanklines=false,
+  numbersep=.2cm,
+  tabsize=8,
   fontsize=\normalsize
 }
 \renewcommand{\theFancyVerbLine}{\oldstylenums{\small{\texttt{\arabic{FancyVerbLine}}}}}
@@ -46,8 +53,8 @@
 \setmonofont[
     ExternalLocation=.fonts/,
     Ligatures=TeX,
-    BoldFont={SourceSansProBold.ttf},
-    BoldItalicFont={SourceSansProBoldItalic.ttf},
+    BoldFont={SourceSansProRegular.ttf},
+    BoldItalicFont={SourceSansProRegularItalic.ttf},
     ItalicFont={SourceSansProRegularItalic.ttf}
 ]{SourceSansProRegular}
 \usepackage{titlesec}
