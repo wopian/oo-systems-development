@@ -2,3 +2,9 @@
 
 % Establish an appropriate Test Strategy highlighting how the stated
 % Requirements for your partial system have been addressed.
+
+To ensure the requirements have been addressed, we have implemented checks in the Java code. For example, only customers are able to purchase tickets. If an agent or the venue manager try to buy tickets they will be denied.
+
+We have used enumeration classes to ensure the correct values are always used, e.g the status of a seat can be $Unheld$, $Held$ or $Reserved$. This ensures that an agent or venue manager will not be able to accidentally enter a typo into the data.
+
+The user types enumation allows the main class to know what type of user is currently logged in, thus allowing the system to prevent access to certain methods. E.g, the create Events method is only accessible by the Venue Manager.
