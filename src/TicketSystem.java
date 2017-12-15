@@ -3,6 +3,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.math.BigDecimal;
+import java.time.format.DateTimeFormatter;
+
 /**
  * Class containing all the information and behaviour for the TicketSystem
  *
@@ -67,13 +69,15 @@ public class TicketSystem
     /**Method that allows other methods to find a particular show
     * @param eventName The name of the event that is being looked for
     * @param showStart The date and time of the start of the show
+    * in the dd.MM.yyyy HH:mm format
     * @return A reference to the show object that is being worked on
     */
     public Show findShow(String eventName, String showStart)
     {
       if(findEvent(eventName) != null)
       {
-        LocalDateTime startDate = LocalDateTime.parse(showStart);
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+        LocalDateTime startDate = LocalDateTime.parse(showStart, format);
         Show show = findEvent(eventName).getShow(startDate);
         return show;
       }
@@ -194,6 +198,21 @@ public class TicketSystem
         }
     }
 
+    public boolean isCustomer()
+    {
+        if(currentUserType.equals(UserTypes.Customer))
+        {
+            return true;
+        }
+        else
+        {
+            System.out.println("You are not authorized to perform this operation.");
+            System.out.println("You have to be a customer to access this function.");
+            System.out.println();
+            return false;
+        }
+    }
+
     /**
      * Method that allows the manager to delete an agent from the system,
      * which in practicality means cancelling their contract
@@ -221,15 +240,16 @@ public class TicketSystem
 
     /**
      * Method that allows a logged in Manager to create a new event in the system
-     * @param startDate The start date of the event
-     * @param endDate The end date of the event
-     * @parma name The name of the event
+     * @param startDate The start date of the event in format dd.MM.yyyy
+     * @param endDate The end date of the event in format dd.MM.yyyy
+     * @param name The name of the event
      */
     public void addEvent(String startDate, String endDate, String name)
     {
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         if(isManager())
         {
-            events.add(new Event(name, LocalDate.parse(startDate), LocalDate.parse(endDate), lastEventID));
+            events.add(new Event(name, LocalDate.parse(startDate, format), LocalDate.parse(endDate, format), lastEventID));
             lastEventID++;
         }
     }
@@ -238,18 +258,19 @@ public class TicketSystem
      * Method that allows a logged in Manager to reschedule a previously created event
      * @param eventName The event that the manager wants to change
      * @param startDate The new start date for the event (if that date is not to be changed
-     * then send a null)
+     * then send a null) in format dd.MM.yyyy
      * @param endDate The new end date for the event (if that date is not to be changed
-     * then send a null
+     * then send a null) in format dd.MM.yyyy
      */
-    public void rescheduleEvent(String eventName, LocalDate startDate, LocalDate endDate)
+    public void rescheduleEvent(String eventName, String startDate, String endDate)
     {
+      DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         if(isManager())
         {
             if(findEvent(eventName) != null)
             {
                 Manager manager = (Manager) users.get(userID);
-                manager.rescheduleEvent(findEvent(eventName), startDate, endDate);
+                manager.rescheduleEvent(findEvent(eventName), LocalDate.parse(startDate, format), LocalDate.parse(endDate, format));
             }
         }
     }
@@ -272,17 +293,18 @@ public class TicketSystem
     /**
     * Method that allows the manager to add a show to an event in the system
     * @param event The event for which the manager is adding the show
-    * @param start The start time and date for the show
-    * @param end The end time and date for the show
+    * @param start The start time and date for the show in format dd.MM.yyyy HH:mm
+    * @param end The end time and date for the show in format dd.MM.yyyy HH:mm
     * @param mspc The maximum seats per customer value for this show
     */
-    public void addShow(String eventName, LocalDateTime start, LocalDateTime end, int mspc)
+    public void addShow(String eventName, String start, String end, int mspc)
     {
+      DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
       if(isManager())
       {
         if(findEvent(eventName) != null)
         {
-          findEvent(eventName).addShow(start, end, mspc);
+          findEvent(eventName).addShow(LocalDateTime.parse(start, format), LocalDateTime.parse(end, format), mspc);
         }
       }
     }
@@ -292,17 +314,20 @@ public class TicketSystem
     * @param eventName The name of the show's event
     * @param start The current start time and date of the show
     * @param newStart The new start date and time for the show (can be null if there is no change)
+    * in the pattern dd.MM.yyyy HH:mm
     * @param newEnd The end date and time for the show (can be null if there is no change)
+    * in the format dd.MM.yyyy HH:mm
     */
-    public void rescheduleShow(String eventName, String start, LocalDateTime newStart, LocalDateTime newEnd)
+    public void rescheduleShow(String eventName, String start, String newStart, String newEnd)
     {
+      DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
       if(isManager())
       {
         Show show = findShow(eventName, start);
         if(show != null)
         {
           Manager manager = (Manager) users.get(userID);
-          manager.rescheduleShow(show, newStart, newEnd);
+          manager.rescheduleShow(show, LocalDateTime.parse(newStart, format), LocalDateTime.parse(newEnd, format));
         }
       }
     }
@@ -310,7 +335,7 @@ public class TicketSystem
     /**
     * Method that allows the manager to cancel a show on the system
     * @param eventName The name of the show's event
-    * @param start The start date and time of the show
+    * @param start The start date and time of the show in the format dd.MM.yyyy HH:mm
     */
     public void cancelShow(String eventName, String start)
     {
@@ -328,7 +353,7 @@ public class TicketSystem
     * A method that allows the manager to change the max seats per customer
     * of a show.
     * @param eventName The name of the show's event
-    * @param start The start date and time of the show
+    * @param start The start date and time of the show in the format dd.MM.yyyy HH:mm
     * @param newMSPC The new max seats per customer value for the show
     */
     public void changeMSPC(String eventName, String start, int newMSPC)
@@ -346,25 +371,27 @@ public class TicketSystem
     /**
     * Method that allows a manager to add a promotion to the system
     * @param promoName Name of the new promotion
-    * @param start The start date of the promotion
-    * @param end The end date of the promotion
+    * @param start The start date of the promotion in the format dd.MM.yyyy
+    * @param end The end date of the promotion in the format dd.MM.yyyy
     * @param promoDay The day that this promotion runs
-    * @param startT The time that the promotion starts
-    * @param endT The time at which the promotion stops running
+    * @param startT The time that the promotion starts in the format HH:mm
+    * @param endT The time at which the promotion stops running in the format HH:mm
     * @param child The price for a child's ticket
     * @param student The price for a student's ticket
     * @param adult The price for an adult's ticket
     * @param senior The price for a senior's ticket
     * @param discountName The name of the discount tarif to be applied to this promotion
     */
-    public void addPromotion(String promoName, LocalDate start, LocalDate end, WeekDay promoDay, LocalTime startTime, LocalTime endTime, BigDecimal child, BigDecimal student, BigDecimal adult, BigDecimal senior, String discountName)
+    public void addPromotion(String promoName, String start, String end, WeekDay promoDay, String startTime, String endTime, BigDecimal child, BigDecimal student, BigDecimal adult, BigDecimal senior, String discountName)
     {
+      DateTimeFormatter date = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+      DateTimeFormatter hour = DateTimeFormatter.ofPattern("HH:mm");
       if(isManager())
       {
         if(findDiscount(discountName) != null)
         {
           int discountID = findDiscount(discountName).getID();
-          promotions.add(new Promotion(lastPromoID, promoName, start, end, promoDay, startTime, endTime, child, student, adult, senior, discountID));
+          promotions.add(new Promotion(lastPromoID, promoName, LocalDate.parse(start, date), LocalDate.parse(end, date), promoDay, LocalTime.parse(startTime, hour), LocalTime.parse(endTime, hour), child, student, adult, senior, discountID));
           lastPromoID++;
         }
       }
@@ -415,14 +442,15 @@ public class TicketSystem
     * @param newPwd The password of the new agent
     * @param newEmail The email of the new agent
     * @param newCom The commission of the new agent
-    * @param newDate The start date of the agent's contract
+    * @param newDate The start date of the agent's contract in format dd.MM.yyyy
     * @param dayDuration The duration of the contract measured in days
     */
-    public void addContract(String name, String newPwd, String newEmail, float newCom, LocalDate newDate, long dayDuration)
+    public void addContract(String name, String newPwd, String newEmail, float newCom, String newDate, long dayDuration)
     {
+      DateTimeFormatter date = DateTimeFormatter.ofPattern("dd.MM.yyyy");
       if(isManager())
       {
-        users.add(new Agent(lastUserID, name, newPwd, newEmail, newCom, newDate, dayDuration));
+        users.add(new Agent(lastUserID, name, newPwd, newEmail, newCom, LocalDate.parse(newDate, date), dayDuration));
         lastUserID++;
       }
     }
@@ -431,17 +459,19 @@ public class TicketSystem
     * Method that allows a manager to change the contract that it has with an agent
     * @param agentName The name of the agent for which the manager is changing the contract
     * @param newCom The new commission for the agent (set to -1 means no change)
-    * @param newDate The new startDate for the contract (set null for no changes)
+    * @param newDate The new startDate for the contract (set null for no changes) in the format
+    * dd.MM.yyyy
     */
     public void changeContract(String agentName, float newCom, LocalDate newDate)
     {
+      DateTimeFormatter date = DateTimeFormatter.ofPattern("dd.MM.yyyy");
       if(isManager())
         {
             User possibleAgent = findUser(agentName);
             if(possibleAgent != null && possibleAgent.getType().equals(UserTypes.Agent))
             {
                 Manager thisOne = (Manager) users.get(userID);
-                thisOne.changeContract((Agent) possibleAgent, newCom, newDate);
+                thisOne.changeContract((Agent) possibleAgent, newCom, LocalDate.parse(newDate, date));
             }
             else
             {
@@ -546,6 +576,42 @@ public class TicketSystem
       if(event != null)
       {
         event.viewShows();
+      }
+    }
+
+    public void buyTicket(String eventName, String start, int seatTicket)
+    {
+      if(isCustomer())
+      {
+        Show show = findShow(eventName, start);
+        if(show != null)
+        {
+          show(eventName, start).reserveSeat(seatTicket);
+          users.get(userID).addTicket(show.getID(), findEvent(eventName).getID(), seatTicket);
+          System.out.println("Your ticket has been bought");
+        }
+        else
+        {
+          System.out.println("Sorry, but there was a problem buying your ticket.");
+        }
+      }
+    }
+
+    public void viewTickets()
+    {
+      if(isCustomer())
+      {
+        Customer customer = (Customer) users.get(userID);
+        customer.viewTickets();
+      }
+    }
+
+    public void viewSoldTickets()
+    {
+      if(isAgent)
+      {
+        Agent agent = (Agent) users.get(userID);
+        agent.viewTickets();
       }
     }
 }

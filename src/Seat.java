@@ -23,7 +23,7 @@ public class Seat
         seatNumber = number;
         status = SeatStatuses.Unheld;
     }
-    
+
     /**
      * A method that allows other methods to retrieve the number of the seat
      * @return The number of the seat
@@ -32,7 +32,7 @@ public class Seat
     {
         return seatNumber;
     }
-    
+
     /**
      * Method that allows other classes to retrieve the status of the seat
      * @return The status of the seat (held, unheld, reserved)
@@ -41,7 +41,7 @@ public class Seat
     {
         return status;
     }
-    
+
     /**
      * Method that allows to change the status of a seat
      * @param newStatus Contains the new status for the seat
@@ -50,7 +50,7 @@ public class Seat
     {
         status = newStatus;
     }
-    
+
     /**
      * Method that allows to assign a promotion to a seat
      * @param promoID The ID of the promotion being assigned to the seat
@@ -58,5 +58,10 @@ public class Seat
     public void setPromotion(int promoID)
     {
         promotionID = promoID;
+    }
+
+    public int getPromoID()
+    {
+      return promoID;
     }
 }

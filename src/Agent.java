@@ -80,6 +80,12 @@ public class Agent extends User
         .count() + " tickets");
     }
 
+    public void viewTickets()
+    {
+      ticketsSold.forEach(ticket -> ticket.printTicket());
+      System.out.println("Total: " + ticketsSold.stream().count() + " tickets");
+    }
+
     /**
      * Method allowing the agent to see the details of a customer
      * @param custName The name of the customer
