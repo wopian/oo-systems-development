@@ -20,7 +20,7 @@ script:
 - bin/appendix > report/appendix.tex
 - cd report
 - xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape -8bit report.tex || true # Tables require regeneration
-- xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape -8bit report.tex
+- xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape -8bit report.tex || true # Texlive 13 
 - cd ..
 deploy:
   provider: pages
