@@ -1,20 +1,50 @@
 \section{Venue Manager}
 
-\subsection{addEvent}
+\subsection{rescheduleEvent}
 \begin{pc}
-OBTAIN start date
-OBTAIN end date
-OBTAIN event name
+OBTAIN event
+OBTAIN new start date
+OBTAIN new end date
+
+IF new start date exists THEN
+    SET event start date to new start date
+END IF
+
+IF new end date exists THEN
+    SET event end date to new end date
+END IF
 \end{pc}
 
-\subsection{}
+\subsection{cancelEvent}
 \begin{pc}
+OBTAIN the event
+
+SET event status to CANCELLED
 \end{pc}
 
-\subsection{}
+\subsection{changeContract}
 \begin{pc}
+OBTAIN agent
+OBTAIN new contract start date
+OBTAIN new contract end date
+OBTAIN new commission
+
+IF new contract start date exists THEN
+    SET agent start date to new contract start date
+END IF
+
+IF new contract end date exists THEN
+    SET agent end date to new contract end date
+END IF
+
+IF new commision exists THEN
+    SET agent commission to new comission
+END IF
 \end{pc}
 
-\subsection{}
+\subsection{cancelContract}
 \begin{pc}
+OBTAIN agent
+
+SET agent end date to current date and time
 \end{pc}
