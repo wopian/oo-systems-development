@@ -1,16 +1,5 @@
 \section{Event}
 
-\subsection{setEventName}
-\begin{pc}
-OBTAIN the new event name
-SET eventName to the new event name
-\end{pc}
-
-\subsection{getEventName}
-\begin{pc}
-RETURN eventName
-\end{pc}
-
 \subsection{getShows}
 Method called with the $start$ and $end$ parameters:
 \begin{pc}
@@ -18,9 +7,9 @@ OBTAIN the start date
 OBTAIN the end date
 
 FOR each show in the event
-	IF the show's startDate is after the start date AND the show's ndDate is before the end date THEN
-		DISPLAY the show's details
-	END IF
+    IF the show's startDate is after the start date AND the show's ndDate is before the end date    THEN
+        DISPLAY the show's details
+    END IF
 END FOR
 \end{pc}
 
@@ -29,8 +18,8 @@ Method called with the $showDate$ parameter:
 OBTAIN the showDate
 
 FOR each show in the event
-	IF the show's startDate equals the showDate THEN
-		DISPLAY the show's details
-	END IF
+    IF the show's startDate equals the showDate THEN
+	    DISPLAY the show's details
+    END IF
 END FOR
 \end{pc}
