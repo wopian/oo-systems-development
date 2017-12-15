@@ -86,6 +86,10 @@ class Show
       return start;
   }
 
+  public Seat getSeat(int seatNumber)
+  {
+    return seats.get(seatNumber);
+  }
   /**
    * Method that allows other classes to retrieve the end date and time of the show
    * @return The end date and time for the show
@@ -107,8 +111,8 @@ class Show
   public void getDetails()
   {
     DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy hh:mm a");
-      System.out.println("Start Date and Time: " + LocalDateTime.parse(start.format(format), format));
-      System.out.println("End Date and Time: " + LocalDateTime.parse(end.format(format), format));
+      System.out.println("Start Date and Time: " + start.format(format);
+      System.out.println("End Date and Time: " + end.format(format);
       System.out.println("Maximum Seats that a customer can buy: " + MaxSeatsPerCustomer);
       System.out.println("Status of the show: " + status.toString());
       System.out.println();

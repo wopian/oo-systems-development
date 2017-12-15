@@ -180,8 +180,8 @@ public class Event
     {
       DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy")
       System.out.println("Name: " + eventName);
-      System.out.println("Start date: " + LocalDate.parse(startDate.format(format), format));
-      System.out.println("End date: " + LocalDate.parse(endDate.format(format), format));
+      System.out.println("Start date: " + startDate.format(format));
+      System.out.println("End date: " + endDate.format(format));
       System.out.println("Status: " + status.toString());
       System.out.println("Number of shows: " + shows.stream().count().toString());
       System.out.println();

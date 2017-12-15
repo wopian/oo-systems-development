@@ -14,6 +14,7 @@ public class Customer extends User
     private String address;
     private int agentID;
     private ArrayList<Ticket> tickets;
+    private int lastTicketID = -1;
 
     public Customer(int lastUserID, String newName, String newPwd, String newEmail)
     {
@@ -83,5 +84,10 @@ public class Customer extends User
     public void setEmail(String newEmail)
     {
         super.setEmail(newEmail);
+    }
+
+    public void addTicket(int showID, int eventID, int seatNumber)
+    {
+      tickets.add(new Ticket(lastTicketID, showID, eventID, seatNumber, name));
     }
 }
