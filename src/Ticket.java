@@ -34,7 +34,7 @@ public class Ticket
         showID = show;
         eventID = event;
         seatNumber = seat;
-        promoID = TicketSystem.events.get(eventID).getShow(eventID).getSeat(seat).getPromoID();
+        int promoID = TicketSystem.events.get(eventID).getShow(eventID).getSeat(seat).getPromoID();
         price = TicketSystem.promotions.get(promoID).getAdultPrice();
         customerName = customer;
     }

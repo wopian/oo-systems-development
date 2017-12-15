@@ -62,6 +62,6 @@ public class Seat
 
     public int getPromoID()
     {
-      return promoID;
+      return promotionID;
     }
 }

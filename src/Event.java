@@ -178,12 +178,12 @@ public class Event
     */
     public void viewEvent()
     {
-      DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+      DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy");
       System.out.println("Name: " + eventName);
       System.out.println("Start date: " + startDate.format(format));
       System.out.println("End date: " + endDate.format(format));
       System.out.println("Status: " + status.toString());
-      System.out.println("Number of shows: " + shows.stream().count().toString());
+      System.out.println("Number of shows: " + shows.stream().count());
       System.out.println();
     }
 
