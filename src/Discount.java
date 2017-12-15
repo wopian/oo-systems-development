@@ -30,16 +30,16 @@ public class Discount
         if(spent != null){minSpent = spent;}else{spent = -1;}
         discountPercent = percent;
     }
-    
+
     /**
      * Method that allows other classes to get the name of the discount
      * @return The name of the discount
      */
-    public String getDiscountName()
+    public String getName()
     {
         return discountName;
     }
-    
+
     /**
      * Method that allows other classes to get the minimum number of tickets to activate the discount
      * @return The minimum number of tickets to buy to activate the discount
@@ -48,7 +48,7 @@ public class Discount
     {
         return minTickets;
     }
-    
+
     /**
      * Method that allows other classes to get the minimum to be spent to activate the discount
      * @return The minimum to be spent
@@ -57,7 +57,7 @@ public class Discount
     {
         return minSpent;
     }
-    
+
     /**
      * Method that allows other classes to get the percentage of discount given
      * @return The percentage of discount
@@ -66,7 +66,12 @@ public class Discount
     {
         return discountPercent;
     }
-    
+
+    public int getID()
+    {
+      return discountID;
+    }
+
     /**
      * Method that allows to set a new name to this discount tarif
      * @param newName The new name for this discount tarif
@@ -75,7 +80,7 @@ public class Discount
     {
         discountName = newName;
     }
-    
+
     /**
      * Method that allows to set a new minimum of tickets to be bought to active the discount
      * @param newMin The new minimum of tickets
@@ -84,7 +89,7 @@ public class Discount
     {
         minTickets = newMin;
     }
-    
+
     /**
      * Method that allows to set a new minimum amount of money to be spent to activate the discount
      * @param newMin The new minimum amount of money to be spent`

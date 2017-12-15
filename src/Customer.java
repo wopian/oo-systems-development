@@ -2,7 +2,7 @@ import java.util.ArrayList;
 /**
  * Class storing all  the customer's information and what they can do in the
  * system.
- * 
+ *
  * To implement: Purchase Ticket method
  *
  * @author Alex Costa
@@ -14,6 +14,13 @@ public class Customer extends User
     private String address;
     private int agentID;
     private ArrayList<Ticket> tickets;
+
+    public Customer(int lastUserID, String newName, String newPwd, String newEmail)
+    {
+      super(lastUserID, newName, newPwd, newEmail);
+      super.userType = UserTypes.Customer;
+      tickets = new ArrayList<Ticket>();
+    }
 
     /**
      * Constructor for objects of class Customer
@@ -27,6 +34,7 @@ public class Customer extends User
     public Customer(int lastUserID, String newName, String newPwd, String newEmail, String newAdd, Integer agent)
     {
         super(lastUserID, newName, newPwd, newEmail);
+        super.userType = UserTypes.Customer;
         address = newAdd;
         if(agent != null){
             agentID = agent;
@@ -36,12 +44,12 @@ public class Customer extends User
         }
         tickets = new ArrayList<Ticket>();
     }
-    
+
     public void viewTickets()
     {
         tickets.forEach(ticket -> ticket.printTicket());
     }
-    
+
     public void viewDetails()
     {
         System.out.println(super.name);
@@ -49,7 +57,7 @@ public class Customer extends User
         System.out.println(address);
         System.out.println(agentID);
     }
-    
+
     /**
      * Method that allows to change the name of the customer
      * @param newName The new name for the customer
@@ -58,7 +66,7 @@ public class Customer extends User
     {
         super.name = newName;
     }
-    
+
     /**
      * Method that allows to change the address of the customer
      * @param newAdd The new address for the customer
@@ -67,7 +75,7 @@ public class Customer extends User
     {
         address = newAdd;
     }
-    
+
     /**
      * Method that allows to change the email address of the customer
      * @param newEmail The new email address of the customer

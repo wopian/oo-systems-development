@@ -24,7 +24,7 @@ public class Promotion
     private BigDecimal priceAdult;
     private BigDecimal priceSenior;
     private int discountID;
-    private Statuses typeDiscount;
+    private DiscountTypes typeDiscount;
     private int minAmount;
     private float discount;
 
@@ -222,11 +222,11 @@ public class Promotion
         Discount thisDiscount = TicketSystem.discounts.get(discountID);
         if(thisDiscount.getMinTickets() == -1)
         {
-            typeDiscount = Statuses.Spend;
+            typeDiscount = typeDiscount.Spend;
             minAmount = thisDiscount.getMinSpent();
         }
         else{
-            typeDiscount = Statuses.Tickets;
+            typeDiscount = typeDiscount.Tickets;
             minAmount = thisDiscount.getMinTickets();
         }
         

@@ -7,13 +7,7 @@
  */
 public enum Statuses
 {
-    SignedOff,
-    LoggedIn,
-    Unheld,
-    Held,
-    Reserved,
     Confirmed,
     Cancelled,
-    Tickets,
-    Spend
+    Rescheduled
 }

@@ -10,7 +10,7 @@ public class Seat
 {
     // instance variables
     private int seatNumber;
-    private Statuses status;
+    private SeatStatuses status;
     private int promotionID;
 
     /**
@@ -21,7 +21,7 @@ public class Seat
     public Seat(int number)
     {
         seatNumber = number;
-        status = Statuses.Unheld;
+        status = SeatStatuses.Unheld;
     }
     
     /**
@@ -37,7 +37,7 @@ public class Seat
      * Method that allows other classes to retrieve the status of the seat
      * @return The status of the seat (held, unheld, reserved)
      */
-    public Statuses getStatus()
+    public SeatStatuses getStatus()
     {
         return status;
     }
@@ -46,7 +46,7 @@ public class Seat
      * Method that allows to change the status of a seat
      * @param newStatus Contains the new status for the seat
      */
-    public void setStatus(Statuses newStatus)
+    public void setStatus(SeatStatuses newStatus)
     {
         status = newStatus;
     }
