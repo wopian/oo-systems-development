@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 /**
  * Class that describes what an event is and what it does
  *
@@ -79,6 +80,15 @@ public class Event
     public int getID()
     {
         return eventID;
+    }
+
+    /**
+    * Method that allows other classes to get the status of the show
+    * @return The status of the show
+    */
+    public Statuses getStatus()
+    {
+      return status;
     }
 
     /**
@@ -161,5 +171,30 @@ public class Event
         }
       }
       return returnShow;
+    }
+
+    /**
+    * Method that prints the details of the show in the system
+    */
+    public void viewEvent()
+    {
+      DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+      System.out.println("Name: " + eventName);
+      System.out.println("Start date: " + LocalDate.parse(startDate.format(format), format));
+      System.out.println("End date: " + LocalDate.parse(endDate.format(format), format));
+      System.out.println("Status: " + status.toString());
+      System.out.println("Number of shows: " + shows.stream().count().toString());
+      System.out.println();
+    }
+
+    public void viewShows()
+    {
+      for(Show show : shows)
+      {
+        if(show.getStatus() != Statuses.Cancelled)
+        {
+          show.getDetails();
+        }
+      }
     }
 }

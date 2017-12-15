@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.time.LocalDateTime;
+import java.time.format.DatetimeFormatter;
 
 /**
 * Class that contains all the data and methods for the a show
@@ -94,14 +95,20 @@ class Show
       return end;
   }
 
+  public Statuses getStatus()
+  {
+    return status;
+  }
+
   /**
    * Method that allows to print the details of the show.
    * Prints all the details for the show in the console
    */
   public void getDetails()
   {
-      System.out.println("Start Date and Time: " + start.toString());
-      System.out.println("End Date and Time: " + end.toString());
+    DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy hh:mm a");
+      System.out.println("Start Date and Time: " + LocalDateTime.parse(start.format(format), format));
+      System.out.println("End Date and Time: " + LocalDateTime.parse(end.format(format), format));
       System.out.println("Maximum Seats that a customer can buy: " + MaxSeatsPerCustomer);
       System.out.println("Status of the show: " + status.toString());
       System.out.println();

@@ -494,6 +494,11 @@ public class TicketSystem
       }
     }
 
+    /**
+    * Method that allows users to login into the system
+    * @param email The email of the user that is logging in
+    * @param pwd The password provided by the user
+    */
     public void login(String email, String pwd)
     {
       int index = -1;
@@ -514,7 +519,33 @@ public class TicketSystem
       {
           users.get(index).login(pwd);
       }
-      
+
       currentUserType = users.get(index).getType();
+    }
+
+    /**
+    * Method that displays all the events that aren't cancelled
+    */
+    public void viewEvents()
+    {
+      for(Event event : events)
+      {
+        if(event.getStatus() != Statuses.Cancelled)
+        {
+          event.viewEvent();
+        }
+      }
+    }
+
+    /**
+    * Method that allows to see the shows from an event
+    */
+    public void viewShows(String eventName)
+    {
+      Event event = findEvent(eventName);
+      if(event != null)
+      {
+        event.viewShows();
+      }
     }
 }
