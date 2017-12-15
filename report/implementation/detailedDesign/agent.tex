@@ -1,17 +1,49 @@
 \section{Agent}
 
-\subsection{}
+\subsection{getTickets}
+Get tickets by event name
 \begin{pc}
+OBTAIN showName
+
+FOR each ticket in tickets
+    SET name to ticket show's name
+    IF name matches showName THEN
+        DISPLAY ticket details
+    END IF
+END FOR
 \end{pc}
 
-\subsection{}
+Get tickets within a date range
 \begin{pc}
+OBTAIN startDate
+OBTAIN endDate
+
+FOR each ticket in tickets
+    SET showTime to the ticket show's start time
+    IF showTime is after the startDate AND showTime is before the endDate THEN
+        DISPLAY ticket details
+    END IF
+END FOR
 \end{pc}
 
-\subsection{}
+\subsection{modifyCustomer}
 \begin{pc}
-\end{pc}
+OBTAIN customer's user ID
+OBTAIN new name
+OBTAIN new email
+OBTAIN new address
 
-\subsection{}
-\begin{pc}
+SET customer to customer instance with matching user ID
+
+IF new name exists THEN
+    SET customer name to new name
+END IF
+
+IF new email exists THEN
+    SET customer email to new name
+END IF
+
+IF new address exists THEN
+    SET customer address to new address
+END IF
 \end{pc}
