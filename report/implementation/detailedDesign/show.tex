@@ -1,17 +1,34 @@
 \section{Show}
 
-\subsection{}
+\subsection{holdSeat}
 \begin{pc}
+OBTAIN seat number
+GET seat from seats where seat number matches
+
+IF seat status is available THEN
+    SET seat status to held
+    DISPLAY held seat number
+ELSE
+    DISPLAY seat is not available
+END IF
 \end{pc}
 
-\subsection{}
+\subsection{unholdSeat}
 \begin{pc}
+OBTAIN seat number
+GET seat from seats where seat number matches
+
+SET seat status to available
 \end{pc}
 
-\subsection{}
+\subsection{reserveSeat}
 \begin{pc}
-\end{pc}
+OBTAIN seat number
+GET seat from seats where seat number matches
 
-\subsection{}
-\begin{pc}
+IF seat status is not reserved THEN
+    SET seat status to reserved
+ELSE
+    DISPLAY seat is already reserved
+END IF
 \end{pc}
