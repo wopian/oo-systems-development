@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 /**
  * Class that describes what an event is and what it does
  *
@@ -31,8 +32,9 @@ public class Event
         endDate = end;
         eventID = (lastEventID + 1);
         status = Statuses.Confirmed;
+        shows = new ArrayList<>();
     }
-    
+
     /**
     * Method that creates a new show for this event
     * @param start The start time and date of the show
@@ -44,7 +46,7 @@ public class Event
     {
         shows.add(new Show(start, end, MSPC, shows.size()));
     }
-    
+
     /**
     * Method that allows to retrieve all the details for the shows of an event
     */
@@ -52,7 +54,7 @@ public class Event
     {
       shows.stream().forEach(show -> show.getDetails());
     }
-  
+
     /**
     * Method that allows to change the name of an event
     * @param newName The new name for the event
@@ -61,7 +63,7 @@ public class Event
     {
       eventName = newName;
     }
-    
+
     /**
      * Method that allows other classes to get the name of the event
      * @return The name of the event
@@ -70,7 +72,25 @@ public class Event
     {
         return eventName;
     }
-  
+
+    /**
+     * Method that allows other classes to get the ID of the event
+     * @return The ID of the event
+     */
+    public int getID()
+    {
+        return eventID;
+    }
+
+    /**
+    * Method that allows other classes to get the status of the show
+    * @return The status of the show
+    */
+    public Statuses getStatus()
+    {
+      return status;
+    }
+
     /**
     * Method that allows to change the start date of the event
     * @param newDate The new start date for the event
@@ -78,8 +98,9 @@ public class Event
     public void setStartDate(LocalDate newDate)
     {
       startDate = newDate;
+      setStatus(Statuses.Rescheduled);
     }
-  
+
     /**
     * Method that allows to change the end date of the event
     * @
@@ -87,8 +108,9 @@ public class Event
     public void setEndDate(LocalDate newDate)
     {
       endDate = newDate;
+      setStatus(Statuses.Rescheduled);
     }
-  
+
     /**
     * Method that allows to set a new status to the event
     * @param newStatus The new status of the event
@@ -97,7 +119,7 @@ public class Event
     {
       status = newStatus;
     }
-  
+
     /**
     * Method that allows to get the shows for a specific date
     * @param showDate The date for which we are looking if the event has shows
@@ -107,7 +129,7 @@ public class Event
       shows.stream().filter(show -> show.getStart().getYear() == showDate.getYear() && show.getStart().getDayOfYear() == showDate.getDayOfYear())
         .forEach(show -> show.getDetails());
     }
-  
+
     /**
     * Method that displays the details of all shows that are in a range
     * @param startDate The date from which to start to look for shows (exclusive)
@@ -118,7 +140,7 @@ public class Event
       shows.stream().filter(show -> show.getStart().isAfter(startDate) && show.getEnd().isBefore(endDate))
         .forEach(show -> show.getDetails());
     }
-    
+
     /**
      * Method that allows other classes to get a Show object from this class
      * @param showID The ID of the show to retrieve from the ArrayList
@@ -127,5 +149,52 @@ public class Event
     public Show getShow(int showID)
     {
         return shows.get(showID);
+    }
+
+    /**Method that allows other classes to get a Show object form this event
+    * @param showStart The date and time of the start of the show
+    * @return The reference to the show object
+    */
+    public Show getShow(LocalDateTime showStart)
+    {
+      Show returnShow = new Show();
+      for(Show show : shows)
+      {
+        if(show.getStart().equals(showStart))
+        {
+          returnShow = show;
+        }
+        else
+        {
+          System.out.println("That show does not exist in the system.");
+          returnShow = null;
+        }
+      }
+      return returnShow;
+    }
+
+    /**
+    * Method that prints the details of the show in the system
+    */
+    public void viewEvent()
+    {
+      DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+      System.out.println("Name: " + eventName);
+      System.out.println("Start date: " + LocalDate.parse(startDate.format(format), format));
+      System.out.println("End date: " + LocalDate.parse(endDate.format(format), format));
+      System.out.println("Status: " + status.toString());
+      System.out.println("Number of shows: " + shows.stream().count().toString());
+      System.out.println();
+    }
+
+    public void viewShows()
+    {
+      for(Show show : shows)
+      {
+        if(show.getStatus() != Statuses.Cancelled)
+        {
+          show.getDetails();
+        }
+      }
     }
 }

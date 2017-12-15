@@ -12,7 +12,8 @@ public class User
     private String password;
     protected String name;
     protected String email;
-    private Statuses status;
+    private UserStatuses status;
+    protected UserTypes userType;
 
     /**
      * Constructor for objects of class User
@@ -27,8 +28,9 @@ public class User
         password = newPwd;
         name = newName;
         email = newEmail;
+        status = status.SignedOff;
     }
-    
+
     /**
      * A method to allow the user to change their password
      * @param newPwd The new password for the user
@@ -57,7 +59,7 @@ public class User
             System.out.println("You are already logged in.");
         }
     }
-    
+
     /**
      * A method that allows the user to log off
      */
@@ -65,14 +67,14 @@ public class User
         status = status.SignedOff;
         System.out.println("You are now logged off.");
     }
-    
+
     /**
      * A method that allows to get the name of the user
      */
     public String getName(){
         return name;
     }
-    
+
     /**
      * Method that allows a user to change their email
      * @param newEmail The new email of the user
@@ -81,7 +83,7 @@ public class User
     {
         email = newEmail;
     }
-    
+
     /**
      * Method that allows other classes to get the ID of the user
      * @return The ID of the user in the int type
@@ -89,5 +91,19 @@ public class User
     public int getID()
     {
         return userID;
+    }
+
+    /**
+     * Method that allows other classes to get the type of user
+     * @return The user type for the user
+     */
+    public UserTypes getType()
+    {
+        return userType;
+    }
+
+    public String getEmail()
+    {
+      return email;
     }
 }
