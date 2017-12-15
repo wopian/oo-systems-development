@@ -19,7 +19,7 @@ script:
 - mkdir pdf
 - cd report
 - xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape -8bit report.tex || true # Tables require regeneration
-- xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape -8bit report.tex || true # Texlive 13 
+- xelatex --synctex=2 --output-directory=../pdf --interaction=nonstopmode -shell-escape -8bit report.tex || true # Texlive 13
 - cd ..
 deploy:
   provider: pages
@@ -29,3 +29,5 @@ deploy:
   target_branch: report
   on:
     branch: master
+notifications:
+  email: false
