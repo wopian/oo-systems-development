@@ -73,10 +73,7 @@ public class Manager extends User
       }
     }
 
-    //TODO: Figure an easy way that doesn't require 1000 lines of code to
-    //change only certain infos if we're not going to change all of them
-    // Also, stop being lazy and think a little bit
-    /**
+    /*
      * A method that allows the manager to change the details of an agent
      * @param agent The agent which details need to be changed
      * @param newCom The new commisison for the agent
