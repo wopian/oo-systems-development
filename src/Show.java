@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.time.LocalDateTime;
-import java.time.format.DatetimeFormatter;
+import java.time.format.DateTimeFormatter;
 
 /**
 * Class that contains all the data and methods for the a show
@@ -41,6 +41,12 @@ class Show
   }
   //So that the compiler leaves me alone
   public Show(){}
+  
+  public int getID()
+  {
+      return showID;
+  }
+  
   /**
    * Method that allows to set a new start date and time to a show
    * @param newStart The new start date and time for the show
@@ -111,8 +117,8 @@ class Show
   public void getDetails()
   {
     DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy hh:mm a");
-      System.out.println("Start Date and Time: " + start.format(format);
-      System.out.println("End Date and Time: " + end.format(format);
+      System.out.println("Start Date and Time: " + start.format(format));
+      System.out.println("End Date and Time: " + end.format(format));
       System.out.println("Maximum Seats that a customer can buy: " + MaxSeatsPerCustomer);
       System.out.println("Status of the show: " + status.toString());
       System.out.println();

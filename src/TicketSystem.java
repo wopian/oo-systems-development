@@ -462,14 +462,14 @@ public class TicketSystem
     * @param newDate The new startDate for the contract (set null for no changes) in the format
     * dd.MM.yyyy
     */
-    public void changeContract(String agentName, float newCom, LocalDate newDate)
+    public void changeContract(String agentName, float newCom, String newDate)
     {
-      DateTimeFormatter date = DateTimeFormatter.ofPattern("dd.MM.yyyy");
       if(isManager())
         {
             User possibleAgent = findUser(agentName);
             if(possibleAgent != null && possibleAgent.getType().equals(UserTypes.Agent))
             {
+                DateTimeFormatter date = DateTimeFormatter.ofPattern("dd.MM.yyyy");
                 Manager thisOne = (Manager) users.get(userID);
                 thisOne.changeContract((Agent) possibleAgent, newCom, LocalDate.parse(newDate, date));
             }
@@ -586,8 +586,9 @@ public class TicketSystem
         Show show = findShow(eventName, start);
         if(show != null)
         {
-          show(eventName, start).reserveSeat(seatTicket);
-          users.get(userID).addTicket(show.getID(), findEvent(eventName).getID(), seatTicket);
+          show.reserveSeat(seatTicket);
+          Customer cust = (Customer) users.get(userID);
+          cust.addTicket(show.getID(), findEvent(eventName).getID(), seatTicket);
           System.out.println("Your ticket has been bought");
         }
         else
@@ -608,7 +609,7 @@ public class TicketSystem
 
     public void viewSoldTickets()
     {
-      if(isAgent)
+      if(isAgent())
       {
         Agent agent = (Agent) users.get(userID);
         agent.viewTickets();
